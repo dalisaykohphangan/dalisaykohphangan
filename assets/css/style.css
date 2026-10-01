@@ -589,6 +589,22 @@ p {
   margin-left: -0.06em;
 }
 
+/* Palm-fan mark beside the wordmark; masked so it takes the heading's colour. */
+.hero__title {
+  display: flex;
+  align-items: center;
+  gap: 0.14em;
+}
+
+.hero__mark {
+  flex: none;
+  width: 0.86em;
+  height: 0.72em;
+  background-color: currentColor;
+  -webkit-mask: url("../img/logo-mark.png") center / contain no-repeat;
+  mask: url("../img/logo-mark.png") center / contain no-repeat;
+}
+
 .hero__sub {
   max-width: 32rem;
   margin: 1.5rem 0 2rem;
