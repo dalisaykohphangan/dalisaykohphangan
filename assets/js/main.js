@@ -225,12 +225,34 @@
     var checkIn = form.elements.checkin;
     var checkOut = form.elements.checkout;
     var today = new Date().toISOString().slice(0, 10);
+    var MIN_STAY_DAYS = 30;
+    var addDays = function (isoDate, days) {
+      var d = new Date(isoDate + "T00:00:00Z");
+      d.setUTCDate(d.getUTCDate() + days);
+      return d.toISOString().slice(0, 10);
+    };
     if (checkIn) checkIn.min = today;
     if (checkIn && checkOut) {
+      var checkStayLength = function () {
+        var earliest = checkOut.min;
+        checkOut.setCustomValidity(
+          checkOut.value && checkOut.value < earliest
+            ? "Our minimum stay is " +
+                MIN_STAY_DAYS +
+                " days. Please choose a check-out date on or after " +
+                earliest +
+                "."
+            : ""
+        );
+      };
+      checkOut.min = addDays(today, MIN_STAY_DAYS);
       checkIn.addEventListener("change", function () {
-        checkOut.min = checkIn.value || today;
-        if (checkOut.value && checkOut.value < checkIn.value) checkOut.value = "";
+        checkOut.min = addDays(checkIn.value || today, MIN_STAY_DAYS);
+        if (checkOut.value && checkOut.value < checkOut.min) checkOut.value = "";
+        checkStayLength();
       });
+      checkOut.addEventListener("input", checkStayLength);
+      checkOut.addEventListener("change", checkStayLength);
     }
 
     var errorBox = form.querySelector("[data-form-error]");
