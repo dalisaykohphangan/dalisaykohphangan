@@ -1,6 +1,6 @@
 # Dalisay Koh Phangan
 
-**Live site:** https://dalisaykohphangan.github.io/dalisaykohphangan/
+**Live site:** https://www.dalisaykohphangan.com/
 
 Static website for Dalisay — adults-only, family-run, eco-conscious elevated bungalows on Koh Phangan, Thailand.
 
@@ -33,7 +33,8 @@ The site is published with GitHub Pages from the `main` branch (repository root)
 - `.nojekyll` tells Pages to serve the files as-is.
 - `404.html` is the not-found page.
 - `sitemap.xml` lists every page — submit it in Google Search Console once the site is live.
-- To use a custom domain later, add it under **Settings → Pages → Custom domain** and update the URLs in `sitemap.xml` and the `canonical` / `og:` tags.
+- `CNAME` holds the custom domain (`www.dalisaykohphangan.com`) — don't delete it.
+- DNS for the domain must point at GitHub Pages: `www` → CNAME `dalisaykohphangan.github.io`; apex `dalisaykohphangan.com` → A `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`.
 
 ## Notes
 
