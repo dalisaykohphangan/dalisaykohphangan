@@ -1,5 +1,7 @@
 # Dalisay Koh Phangan
 
+**Live site:** https://dalisaykohphangan.github.io/dalisaykohphangan/
+
 Static website for Dalisay — adults-only, family-run, eco-conscious elevated bungalows on Koh Phangan, Thailand.
 
 ## Pages
@@ -23,6 +25,15 @@ No build step. Open `index.html` in a browser, or serve the folder:
 ```sh
 python3 -m http.server 8000
 ```
+
+## Hosting
+
+The site is published with GitHub Pages from the `main` branch (repository root). Every push to `main` redeploys it automatically, usually within a minute.
+
+- `.nojekyll` tells Pages to serve the files as-is.
+- `404.html` is the not-found page.
+- `sitemap.xml` lists every page — submit it in Google Search Console once the site is live.
+- To use a custom domain later, add it under **Settings → Pages → Custom domain** and update the URLs in `sitemap.xml` and the `canonical` / `og:` tags.
 
 ## Notes
 
