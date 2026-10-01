@@ -2285,6 +2285,36 @@ a.cat:hover {
   cursor: progress;
 }
 
+/* Contact page: stretch the photo so both columns end at the same line. */
+.contact-grid--match {
+  align-items: stretch;
+}
+
+.contact-aside {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-aside__photo {
+  flex: 1 1 auto;
+  min-height: 320px;
+  position: relative;
+  margin-top: 2.5rem;
+  aspect-ratio: auto;
+}
+
+.contact-aside__photo img {
+  position: absolute;
+  inset: 0;
+}
+
+@media (max-width: 860px) {
+  .contact-aside__photo {
+    flex: none;
+    aspect-ratio: 4 / 5;
+  }
+}
+
 @media (max-width: 860px) {
   .contact-grid {
     grid-template-columns: 1fr;
