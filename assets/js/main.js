@@ -212,7 +212,7 @@
     });
   }
 
-  /* ---------- Enquiry form -> email ---------- */
+  /* ---------- Enquiry form -> email (via FormSubmit) ---------- */
   var form = document.querySelector("[data-enquiry]");
 
   if (form) {
@@ -233,35 +233,70 @@
       });
     }
 
+    var errorBox = form.querySelector("[data-form-error]");
+    var successBox = form.querySelector("[data-form-success]");
+    var submitBtn = form.querySelector('button[type="submit"]');
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       if (!form.reportValidity()) return;
 
       var el = form.elements;
-      var subject =
-        "Booking enquiry — " + (el.bungalow.value || "Dalisay bungalow");
-      var body = [
-        "Hello Dalisay,",
-        "",
-        "I'd love to stay with you. Here are my details:",
-        "",
-        "Name: " + el.name.value,
-        "Email: " + el.email.value,
-        "Bungalow: " + (el.bungalow.value || "No preference"),
-        "Check-in: " + (el.checkin.value || "-"),
-        "Check-out: " + (el.checkout.value || "-"),
-        "Guests: " + el.guests.value,
-        "",
-        el.message.value,
-      ].join("\n");
+      var to = form.getAttribute("data-to");
+      var data = {
+        _subject:
+          "Booking enquiry — " + (el.bungalow.value || "Dalisay bungalow"),
+        _template: "table",
+        _captcha: "false",
+        _honey: el._honey.value,
+        name: el.name.value,
+        email: el.email.value,
+        bungalow: el.bungalow.value || "No preference",
+        checkin: el.checkin.value || "-",
+        checkout: el.checkout.value || "-",
+        guests: el.guests.value,
+        message: el.message.value || "-",
+      };
 
-      window.location.href =
-        "mailto:" +
-        form.getAttribute("data-to") +
-        "?subject=" +
-        encodeURIComponent(subject) +
-        "&body=" +
-        encodeURIComponent(body);
+      errorBox.hidden = true;
+      submitBtn.disabled = true;
+      submitBtn.firstChild.textContent = "Sending… ";
+
+      fetch("https://formsubmit.co/ajax/" + to, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+        .then(function (res) {
+          return res.json().then(function (json) {
+            if (!res.ok || String(json.success) !== "true") {
+              throw new Error(json.message || "Send failed");
+            }
+          });
+        })
+        .then(function () {
+          Array.prototype.forEach.call(form.children, function (child) {
+            if (child !== successBox) child.hidden = true;
+          });
+          successBox.hidden = false;
+          successBox.focus();
+        })
+        .catch(function () {
+          errorBox.innerHTML =
+            'Sorry, your enquiry could not be sent. Please try again, or email us at <a href="mailto:' +
+            to +
+            '">' +
+            to +
+            "</a>.";
+          errorBox.hidden = false;
+        })
+        .then(function () {
+          submitBtn.disabled = false;
+          submitBtn.firstChild.textContent = "Send enquiry ";
+        });
     });
   }
 

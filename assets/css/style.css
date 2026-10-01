@@ -2241,6 +2241,50 @@ a.cat:hover {
   color: rgba(236, 231, 218, 0.78);
 }
 
+.form [hidden] {
+  display: none !important;
+}
+
+.form__hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form__error {
+  margin: 1.5rem 0 0;
+  padding: 0.85rem 1rem;
+  border-left: 2px solid var(--clay);
+  background: rgba(17, 26, 19, 0.25);
+  font-size: 0.9rem;
+}
+
+.form__error a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.form__success {
+  padding: 1rem 0;
+}
+
+.form__success:focus {
+  outline: none;
+}
+
+.form__success p:last-child {
+  max-width: 32rem;
+  margin: 0;
+  color: var(--cream-dim);
+}
+
+.form .btn:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
 @media (max-width: 860px) {
   .contact-grid {
     grid-template-columns: 1fr;
