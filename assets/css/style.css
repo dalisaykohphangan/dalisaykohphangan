@@ -1669,22 +1669,30 @@ p {
   color: var(--cream);
 }
 
+/* Even grid: every tile shares the photos' 9:16 portrait shape. */
 .masonry {
-  columns: 4 260px;
-  column-gap: clamp(0.6rem, 1.2vw, 1rem);
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(0.6rem, 1.2vw, 1rem);
+}
+
+@media (max-width: 700px) {
+  .masonry {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .masonry button {
   position: relative;
   display: block;
   width: 100%;
-  margin: 0 0 clamp(0.6rem, 1.2vw, 1rem);
+  aspect-ratio: 9 / 16;
+  margin: 0;
   padding: 0;
   border: 0;
   overflow: hidden;
   background: var(--forest);
   cursor: zoom-in;
-  break-inside: avoid;
 }
 
 .masonry button[hidden] {
@@ -1693,6 +1701,8 @@ p {
 
 .masonry img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: transform 1.2s var(--ease);
 }
 
