@@ -40,3 +40,15 @@ The site is published with GitHub Pages from the `main` branch (repository root)
 
 - The contact form opens the visitor's email app with a pre-filled enquiry to `dalisaykohphangan@gmail.com` (no server needed).
 - The guest quotes on `reviews.html` are placeholders — replace them with real reviews before publishing.
+
+## Thai version
+
+The Thai pages in `th/` are generated from the English pages — don't edit them by hand.
+After changing any English page, run:
+
+```
+python3 tools/build_th.py
+```
+
+Translations live in `tools/th.json` (English → Thai). If the build lists
+untranslated text, add those lines to `th.json` and run it again.

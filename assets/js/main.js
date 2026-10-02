@@ -4,6 +4,12 @@
   var root = document.documentElement;
   root.classList.remove("no-js");
 
+  // Thai pages (th/) set <html lang="th">; pick the matching wording.
+  var TH = root.lang === "th";
+  function t(en, th) {
+    return TH ? th : en;
+  }
+
   /* ---------- Header: solid on scroll ---------- */
   var header = document.querySelector(".site-header");
   var hasHero = document.querySelector("[data-hero]");
@@ -24,7 +30,10 @@
   function setMenu(open) {
     document.body.classList.toggle("menu-open", open);
     toggle.setAttribute("aria-expanded", String(open));
-    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    toggle.setAttribute(
+      "aria-label",
+      open ? t("Close menu", "ปิดเมนู") : t("Open menu", "เปิดเมนู")
+    );
     menu.setAttribute("aria-hidden", String(!open));
     document.body.style.overflow = open ? "hidden" : "";
   }
@@ -233,41 +242,155 @@
     };
     if (checkIn) checkIn.min = today;
     if (checkIn && checkOut) {
+      var TH_MONTHS = ["มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม",
+        "มิถุนายน", "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม"];
+      var thaiDate = function (iso) {
+        var p = iso.split("-");
+        // Thai Buddhist Era year: Gregorian + 543.
+        return Number(p[2]) + " " + TH_MONTHS[Number(p[1]) - 1] + " " + (Number(p[0]) + 543);
+      };
+      // The calendar header's year box shows the Buddhist Era year (read-only,
+      // since flatpickr parses whatever is typed there as a Gregorian year).
+      var showThaiYear = function (a, b, inst) {
+        var fp = inst || a;
+        if (!fp || !fp.currentYearElement) return;
+        fp.currentYearElement.readOnly = true;
+        requestAnimationFrame(function () {
+          fp.currentYearElement.value = fp.currentYear + 543;
+        });
+      };
       var checkStayLength = function () {
         var earliest = checkOut.min;
-        checkOut.setCustomValidity(
+        var msg =
           checkOut.value && checkOut.value < earliest
-            ? "Our minimum stay is " +
-                MIN_STAY_DAYS +
-                " days. Please choose a check-out date on or after " +
-                earliest +
-                "."
-            : ""
-        );
+            ? t(
+                "Our minimum stay is " +
+                  MIN_STAY_DAYS +
+                  " days. Please choose a check-out date on or after " +
+                  earliest +
+                  ".",
+                "เข้าพักขั้นต่ำ " +
+                  MIN_STAY_DAYS +
+                  " วัน กรุณาเลือกวันเช็คเอาท์ตั้งแต่ " +
+                  thaiDate(earliest) +
+                  " เป็นต้นไป"
+              )
+            : "";
+        checkOut.setCustomValidity(msg);
+        if (checkOut._flatpickr) checkOut._flatpickr.altInput.setCustomValidity(msg);
       };
       checkOut.min = addDays(today, MIN_STAY_DAYS);
       checkIn.addEventListener("change", function () {
         checkOut.min = addDays(checkIn.value || today, MIN_STAY_DAYS);
         if (checkOut.value && checkOut.value < checkOut.min) checkOut.value = "";
+        if (checkOut._flatpickr) {
+          checkOut._flatpickr.set("minDate", checkOut.min);
+          if (!checkOut.value) checkOut._flatpickr.clear(false);
+          showThaiYear(checkOut._flatpickr);
+        }
         checkStayLength();
       });
       checkOut.addEventListener("input", checkStayLength);
       checkOut.addEventListener("change", checkStayLength);
+
+      // Browsers draw native date pickers in the device's language, so the
+      // Thai pages use flatpickr with its Thai locale for Thai months and days.
+      if (TH) {
+        var CDN = "https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/";
+        var addCss = function (href) {
+          var l = document.createElement("link");
+          l.rel = "stylesheet";
+          l.href = href;
+          document.head.appendChild(l);
+        };
+        var addJs = function (src) {
+          return new Promise(function (resolve, reject) {
+            var sc = document.createElement("script");
+            sc.src = src;
+            sc.onload = resolve;
+            sc.onerror = reject;
+            document.head.appendChild(sc);
+          });
+        };
+        addCss(CDN + "flatpickr.min.css");
+        addCss(CDN + "themes/dark.min.css");
+        addJs(CDN + "flatpickr.min.js")
+          .then(function () {
+            return addJs(CDN + "l10n/th.min.js");
+          })
+          .then(function () {
+            var altFormat = "j F Y";
+            var base = {
+              locale: "th",
+              dateFormat: "Y-m-d",
+              altInput: true,
+              altFormat: altFormat,
+              // Show the Buddhist Era year in the field; keep Y-m-d for the email.
+              formatDate: function (date, format) {
+                if (format === altFormat) return thaiDate(window.flatpickr.formatDate(date, "Y-m-d"));
+                return window.flatpickr.formatDate(date, format);
+              },
+              onReady: showThaiYear,
+              onOpen: showThaiYear,
+              onMonthChange: showThaiYear,
+              onYearChange: showThaiYear,
+              onChange: showThaiYear,
+              altInputClass: "date-alt",
+              disableMobile: true,
+            };
+            [checkIn, checkOut].forEach(function (input) {
+              window.flatpickr(input, Object.assign({}, base, { minDate: input.min }));
+              var alt = input._flatpickr.altInput;
+              alt.required = input.required;
+              alt.placeholder = "เลือกวันที่";
+              var label = form.querySelector('label[for="' + input.id + '"]');
+              if (label) {
+                alt.id = input.id;
+                input.removeAttribute("id");
+              }
+            });
+          })
+          .catch(function () {
+            // If the CDN is unreachable the native date inputs still work.
+          });
+      }
     }
 
     var errorBox = form.querySelector("[data-form-error]");
     var successBox = form.querySelector("[data-form-success]");
     var submitBtn = form.querySelector('button[type="submit"]');
 
+    // flatpickr's visible date fields are read-only, which browsers skip when
+    // checking "required" - so ask for missing dates explicitly.
+    var missingDate = function () {
+      var empty = [checkIn, checkOut].filter(function (input) {
+        return input && input._flatpickr && !input.value;
+      })[0];
+      if (!empty) return false;
+      var alt = empty._flatpickr.altInput;
+      alt.readOnly = false;
+      alt.setCustomValidity(t("Please choose a date.", "กรุณาเลือกวันที่"));
+      alt.reportValidity();
+      var reset = function () {
+        alt.readOnly = true;
+        alt.setCustomValidity("");
+      };
+      alt.addEventListener("blur", reset, { once: true });
+      empty.addEventListener("change", reset, { once: true });
+      return true;
+    };
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-      if (!form.reportValidity()) return;
+      if (!form.reportValidity() || missingDate()) return;
 
       var el = form.elements;
       var to = form.getAttribute("data-to");
       var data = {
         _subject:
-          "Booking enquiry — " + (el.bungalow.value || "Dalisay bungalow"),
+          "Booking enquiry — " +
+          (el.bungalow.value || "Dalisay bungalow") +
+          t("", " [TH]"),
         _template: "table",
         _captcha: "false",
         _honey: el._honey.value,
@@ -282,7 +405,7 @@
 
       errorBox.hidden = true;
       submitBtn.disabled = true;
-      submitBtn.firstChild.textContent = "Sending… ";
+      submitBtn.firstChild.textContent = t("Sending… ", "กำลังส่ง… ");
 
       fetch("https://formsubmit.co/ajax/" + to, {
         method: "POST",
@@ -308,16 +431,21 @@
         })
         .catch(function () {
           errorBox.innerHTML =
-            'Sorry, your enquiry could not be sent. Please try again, or email us at <a href="mailto:' +
+            t(
+              "Sorry, your enquiry could not be sent. Please try again, or email us at ",
+              "ขออภัย ไม่สามารถส่งคำถามได้ กรุณาลองอีกครั้ง หรือส่งอีเมลถึงเราที่ "
+            ) +
+            '<a href="mailto:' +
             to +
             '">' +
             to +
-            "</a>.";
+            "</a>" +
+            t(".", "");
           errorBox.hidden = false;
         })
         .then(function () {
           submitBtn.disabled = false;
-          submitBtn.firstChild.textContent = "Send enquiry ";
+          submitBtn.firstChild.textContent = t("Send enquiry ", "ส่งคำถาม ");
         });
     });
   }
