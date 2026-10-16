@@ -1,6 +1,8 @@
 (function () {
   "use strict";
 
+  // Base for files next to this script (works from / and /th/ pages).
+  var SCRIPT_SRC = document.currentScript && document.currentScript.src;
   var root = document.documentElement;
   root.classList.remove("no-js");
 
@@ -448,6 +450,100 @@
           submitBtn.firstChild.textContent = t("Send enquiry ", "ส่งคำถาม ");
         });
     });
+  }
+
+  /* ---------- Availability calendars (synced from Your.Rentals) ---------- */
+  // assets/data/availability.json is refreshed by a scheduled GitHub Action.
+  // A night is booked when every unit of that style is taken; ranges are
+  // [first night, checkout day) like iCal.
+  var availBlocks = document.querySelectorAll("[data-availability]");
+
+  if (availBlocks.length && SCRIPT_SRC && window.fetch) {
+    var MONTHS_TH = ["มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน",
+      "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม"];
+    var MONTHS_EN = ["January", "February", "March", "April", "May", "June", "July",
+      "August", "September", "October", "November", "December"];
+    var DAYS = TH
+      ? ["จ", "อ", "พ", "พฤ", "ศ", "ส", "อา"]
+      : ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"];
+    var SHOW_MONTHS = 2;
+    var MAX_AHEAD = 6; // months guests can page through
+
+    var iso = function (y, m, d) {
+      return y + "-" + String(m + 1).padStart(2, "0") + "-" + String(d).padStart(2, "0");
+    };
+    var monthLabel = function (y, m) {
+      return TH ? MONTHS_TH[m] + " " + (y + 543) : MONTHS_EN[m] + " " + y;
+    };
+
+    var renderMonth = function (y, m, booked, todayIso) {
+      var first = (new Date(y, m, 1).getDay() + 6) % 7; // Monday first
+      var days = new Date(y, m + 1, 0).getDate();
+      var html = '<div class="cal-month"><p class="cal-month__name">' + monthLabel(y, m) +
+        '</p><div class="cal-grid" role="grid">';
+      DAYS.forEach(function (d) {
+        html += '<span class="cal-dow" aria-hidden="true">' + d + "</span>";
+      });
+      for (var i = 0; i < first; i++) html += "<span></span>";
+      for (var d = 1; d <= days; d++) {
+        var key = iso(y, m, d);
+        var isBooked = booked(key);
+        var cls = "cal-day" + (key < todayIso ? " is-past" : "") +
+          (isBooked ? " is-booked" : "") + (key === todayIso ? " is-today" : "");
+        var state = isBooked ? t("booked", "ไม่ว่าง") : t("available", "ว่าง");
+        html += '<span class="' + cls + '" role="gridcell" aria-label="' +
+          (TH ? d + " " + monthLabel(y, m) : d + " " + monthLabel(y, m)) + ", " + state +
+          '">' + d + "</span>";
+      }
+      return html + "</div></div>";
+    };
+
+    fetch(new URL("../data/availability.json", SCRIPT_SRC), { cache: "no-cache" })
+      .then(function (r) {
+        if (!r.ok) throw new Error("no data");
+        return r.json();
+      })
+      .then(function (data) {
+        var now = new Date();
+        var todayIso = iso(now.getFullYear(), now.getMonth(), now.getDate());
+        availBlocks.forEach(function (block) {
+          var style = data.styles && data.styles[block.getAttribute("data-availability")];
+          if (!style) return;
+          var ranges = style.booked || [];
+          var booked = function (key) {
+            return ranges.some(function (r) {
+              return key >= r[0] && key < r[1];
+            });
+          };
+          var cal = block.querySelector("[data-cal]");
+          var offset = 0;
+          var draw = function () {
+            var html = '<div class="cal-nav">' +
+              '<button type="button" class="cal-nav__btn" data-step="-1" aria-label="' +
+              t("Previous months", "เดือนก่อนหน้า") + '"' + (offset <= 0 ? " disabled" : "") +
+              '>‹</button><button type="button" class="cal-nav__btn" data-step="1" aria-label="' +
+              t("Next months", "เดือนถัดไป") + '"' +
+              (offset >= MAX_AHEAD - SHOW_MONTHS ? " disabled" : "") + ">›</button></div>" +
+              '<div class="cal-months">';
+            for (var i = 0; i < SHOW_MONTHS; i++) {
+              var dte = new Date(now.getFullYear(), now.getMonth() + offset + i, 1);
+              html += renderMonth(dte.getFullYear(), dte.getMonth(), booked, todayIso);
+            }
+            cal.innerHTML = html + "</div>";
+          };
+          cal.addEventListener("click", function (e) {
+            var btn = e.target.closest("[data-step]");
+            if (!btn || btn.disabled) return;
+            offset += Number(btn.getAttribute("data-step"));
+            draw();
+          });
+          draw();
+          block.hidden = false;
+        });
+      })
+      .catch(function () {
+        // No data yet (or offline): leave the calendars hidden.
+      });
   }
 
   /* ---------- Year ---------- */

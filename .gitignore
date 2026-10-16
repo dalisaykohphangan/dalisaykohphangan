@@ -1,1 +1,4 @@
 .DS_Store
+
+# Private print files (rental agreement etc.) — keep out of the public repo
+print/

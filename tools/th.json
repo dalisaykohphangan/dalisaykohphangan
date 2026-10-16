@@ -82,7 +82,6 @@
  "Washbasin with brass tap in a pink terrazzo bathroom": "อ่างล้างหน้าก๊อกทองเหลืองในห้องน้ำหินขัดสีชมพู",
  "Breakfast table set with yellow flowers": "โต๊ะอาหารเช้าประดับดอกไม้สีเหลือง",
  "Bungalows spread across a shaded tropical garden": "บังกะโลกระจายตัวอยู่ในสวนเขตร้อนอันร่มรื่น",
-
  "Bungalows — Dalisay Koh Phangan": "บังกะโล | Dalisay เกาะพะงัน",
  "Raised among<br>the <em>palms</em>.": "ยกสูง<br>ท่ามกลาง<em>ต้นมะพร้าว</em>",
  "Six one-bedroom bungalows in three styles, two of each, lifted on stilts above the garden. Each has its own veranda, kitchen and dining area, inspired by traditional Thai architecture and finished with modern comforts.": "บังกะโลหนึ่งห้องนอนหกหลังในสามสไตล์ สไตล์ละสองหลัง ยกสูงบนเสาเหนือสวน ทุกหลังมีระเบียง ครัว และมุมรับประทานอาหารของตัวเอง ได้แรงบันดาลใจจากสถาปัตยกรรมไทยดั้งเดิมและเติมเต็มด้วยความสะดวกสบายสมัยใหม่",
@@ -153,7 +152,6 @@
  "Previous photo": "ภาพก่อนหน้า",
  "Close": "ปิด",
  "Next photo": "ภาพถัดไป",
-
  "Gallery — Dalisay Koh Phangan": "แกลเลอรี | Dalisay เกาะพะงัน",
  "A garden<br>to <em>wake up</em> in.": "สวนที่คุณ<br>จะ<em>ตื่นมาพบ</em>",
  "The grounds, the bungalows and the little details: coconut palms, allamanda in bloom, terrazzo, brass and soft island light.": "บริเวณสวน บังกะโล และรายละเอียดเล็ก ๆ ต้นมะพร้าว ดอกบานบุรีที่ผลิบาน หินขัด ทองเหลือง และแสงอ่อนละมุนของเกาะ",
@@ -202,7 +200,6 @@
  "See the bungalows": "ดูบังกะโล",
  "Photos of Dalisay's elevated bungalows, tropical garden and interior details on Koh Phangan.": "ภาพบังกะโลยกสูง สวนเขตร้อน และรายละเอียดการตกแต่งภายในของ Dalisay บนเกาะพะงัน",
  "Filter photos": "กรองภาพ",
-
  "Guest Reviews — Dalisay Koh Phangan": "รีวิวจากผู้เข้าพัก | Dalisay เกาะพะงัน",
  "Guest reviews": "รีวิวจากผู้เข้าพัก",
  "Kind words<br>from <em>our guests</em>.": "คำชื่นชม<br>จาก<em>ผู้เข้าพัก</em>",
@@ -218,7 +215,6 @@
  "Make your <em>own</em> memories.": "สร้างความทรงจำ<em>ของคุณเอง</em>",
  "What guests say about their stay at Dalisay's elevated bungalows on Koh Phangan.": "ความประทับใจของผู้เข้าพักที่บังกะโลยกสูงของ Dalisay บนเกาะพะงัน",
  "5 out of 5": "5 จาก 5 ดาว",
-
  "About Us — Dalisay Koh Phangan": "เกี่ยวกับเรา | Dalisay เกาะพะงัน",
  "About us": "เกี่ยวกับเรา",
  "The old soul<br>of <em>Koh Phangan</em>.": "จิตวิญญาณดั้งเดิม<br>ของ<em>เกาะพะงัน</em>",
@@ -245,7 +241,6 @@
  "Bungalows across the garden seen through yellow allamanda flowers": "บังกะโลกลางสวนที่มองผ่านดอกบานบุรีสีเหลือง",
  "Bungalow veranda glimpsed through the trunks of garden trees": "ระเบียงบังกะโลที่มองเห็นผ่านลำต้นของต้นไม้ในสวน",
  "Bungalow veranda and front steps beneath a mango tree, with pink oleander in front": "ระเบียงและบันไดหน้าบังกะโลใต้ต้นมะม่วง มีดอกยี่โถสีชมพูอยู่ด้านหน้า",
-
  "Contact &amp; Booking — Dalisay Koh Phangan": "ติดต่อและจองที่พัก | Dalisay เกาะพะงัน",
  "Book your<br><em>stay</em>.": "จอง<br><em>ที่พัก</em>",
  "Phone": "โทรศัพท์",
@@ -272,11 +267,13 @@
  "Message us on WhatsApp": "ส่งข้อความหาเราทาง WhatsApp",
  "Find us on Google Maps": "ดูตำแหน่งของเราบน Google Maps",
  "Arrival time, questions, special requests…": "เวลาที่จะมาถึง คำถาม หรือคำขอพิเศษ…",
-
  "Page not found — Dalisay Koh Phangan": "ไม่พบหน้านี้ | Dalisay เกาะพะงัน",
  "Page not found": "ไม่พบหน้านี้",
  "Lost in<br>the <em>garden</em>.": "หลงทาง<br>ใน<em>สวน</em>",
  "The page you were looking for has wandered off. Let's get you back to the bungalows.": "หน้าที่คุณกำลังมองหาได้หายไปแล้ว กลับไปที่บังกะโลกันเถอะ",
  "Back home": "กลับหน้าแรก",
- "This page could not be found.": "ไม่พบหน้าที่คุณต้องการ"
+ "This page could not be found.": "ไม่พบหน้าที่คุณต้องการ",
+ "Availability": "ห้องว่าง",
+ "Available": "ว่าง",
+ "Booked": "ไม่ว่าง"
 }

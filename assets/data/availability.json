@@ -1,0 +1,17 @@
+{
+ "updated": "2026-10-16T09:29:18+00:00",
+ "styles": {
+  "mangosteen": {
+   "units": 2,
+   "booked": []
+  },
+  "pomelo": {
+   "units": 2,
+   "booked": []
+  },
+  "tamarind": {
+   "units": 1,
+   "booked": []
+  }
+ }
+}

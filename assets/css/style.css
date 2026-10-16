@@ -2566,3 +2566,130 @@ html body .flatpickr-calendar .flatpickr-current-month input.cur-year {
   cursor: default;
 }
 
+
+/* ---------- Availability calendars (bungalows page) ---------- */
+.availability {
+  margin: 2rem 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.availability[hidden] {
+  display: none;
+}
+
+.availability__title {
+  margin: 0 0 1rem;
+  font-size: 0.66rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+}
+
+.availability__cal {
+  position: relative;
+}
+
+.cal-nav {
+  position: absolute;
+  top: -2.4rem;
+  right: 0;
+  display: flex;
+  gap: 0.25rem;
+}
+
+.cal-nav__btn {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--cream);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.cal-nav__btn:hover:not(:disabled) {
+  border-color: var(--cream);
+}
+
+.cal-nav__btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.cal-months {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 3vw, 2rem);
+}
+
+@media (max-width: 520px) {
+  .cal-months {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cal-month__name {
+  margin: 0 0 0.6rem;
+  font-size: 0.95rem;
+}
+
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 2px;
+  text-align: center;
+}
+
+.cal-dow {
+  padding-bottom: 0.3rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cream-faint);
+}
+
+.cal-day {
+  padding: 0.45rem 0;
+  font-size: 0.8rem;
+  color: var(--cream);
+  background: rgba(236, 231, 218, 0.05);
+}
+
+.cal-day.is-today {
+  outline: 1px solid var(--sage);
+  outline-offset: -1px;
+}
+
+.cal-day.is-past {
+  color: var(--cream-faint);
+  background: transparent;
+}
+
+.cal-day.is-booked {
+  color: var(--cream-faint);
+  background: rgba(192, 106, 62, 0.28);
+  text-decoration: line-through;
+}
+
+.availability__legend {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 1rem 0 0;
+  font-size: 0.75rem;
+  color: var(--cream-dim);
+}
+
+.availability__key {
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  background: rgba(236, 231, 218, 0.12);
+}
+
+.availability__key--booked {
+  margin-left: 0.9rem;
+  background: rgba(192, 106, 62, 0.45);
+}
