@@ -14,7 +14,7 @@
   --cream: #ece7da;
   --cream-dim: rgba(236, 231, 218, 0.7);
   --cream-faint: rgba(236, 231, 218, 0.45);
-  --clay: #c06a3e;
+  --clay: #a65d3f;
 
   --line: rgba(236, 231, 218, 0.14);
   --line-strong: rgba(236, 231, 218, 0.28);
@@ -258,7 +258,7 @@ p {
 }
 
 .btn--clay:hover {
-  --btn-bg: #a85a33;
+  --btn-bg: #8e4e34;
 }
 
 .text-link {
@@ -2684,7 +2684,7 @@ html body .flatpickr-calendar .flatpickr-current-month input.cur-year {
 
 .cal-day.is-past.is-booked {
   color: var(--cream-faint);
-  background: rgba(192, 106, 62, 0.35);
+  background: rgba(166, 93, 63, 0.35);
 }
 
 .availability__legend {
