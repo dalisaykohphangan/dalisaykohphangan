@@ -2383,6 +2383,15 @@ a.cat:hover {
   flex-direction: column;
 }
 
+.contact-aside__book {
+  margin-top: 2.5rem;
+}
+
+.contact-aside__book .muted {
+  margin: 0.75rem 0 1.25rem;
+  max-width: 34ch;
+}
+
 .contact-aside__photo {
   flex: 1 1 auto;
   min-height: 320px;
