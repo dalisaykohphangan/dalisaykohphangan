@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T09:29:18+00:00",
+ "updated": "2026-10-20T03:31:33+00:00",
  "styles": {
   "mangosteen": {
    "units": 2,
@@ -10,7 +10,7 @@
    "booked": []
   },
   "tamarind": {
-   "units": 1,
+   "units": 2,
    "booked": []
   }
  }

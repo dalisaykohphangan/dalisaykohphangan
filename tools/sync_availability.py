@@ -1,29 +1,25 @@
 #!/usr/bin/env python3
-"""Pull Your.Rentals iCal feeds and write assets/data/availability.json.
+"""Pull Beds24 iCal feeds and write assets/data/availability.json.
 
-The feed URLs are private (anyone with one can read that listing's bookings),
-so they come from the YR_ICAL_FEEDS environment variable - a GitHub Actions
-secret - never from the repository. Format: JSON mapping style -> list of URLs
+Each bungalow style is one Beds24 room with 2 units. Its iCal export is set to
+"Unavailable Dates", so the feed only lists nights when every unit of that
+style is booked or blocked, with no guest details - the same information the
+website shows. That is why the feed URLs can live in the repository.
 
-    {"mangosteen": ["https://ical.your.rentals/export/ical/.../en.ics", ...],
-     "pomelo": [...], "tamarind": [...]}
-
-Only dates are written out: a night counts as booked for a style when every
-unit of that style is booked (or blocked) that night. No guest details leave
-Your.Rentals.
-
-    YR_ICAL_FEEDS='{"pomelo": ["https://..."]}' python3 tools/sync_availability.py
+    python3 tools/sync_availability.py
 """
 import datetime as dt
 import json
 import os
 import re
-import sys
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "assets", "data", "availability.json")
 HORIZON_DAYS = 400
+FEED = "https://api.beds24.com/ical/bookings.ics?roomid={}"
+ROOMS = {"mangosteen": 744783, "pomelo": 744782, "tamarind": 744781}
+UNITS_PER_STYLE = 2
 
 
 def fetch(url):
@@ -70,22 +66,13 @@ def to_ranges(dates):
 
 
 def main():
-    raw = os.environ.get("YR_ICAL_FEEDS")
-    if not raw:
-        # Secret not added yet: skip quietly rather than failing every run.
-        print("YR_ICAL_FEEDS is not set; skipping sync")
-        return
-    feeds = json.loads(raw)
     today = dt.date.today()
     horizon = today + dt.timedelta(days=HORIZON_DAYS)
 
     styles = {}
-    for style, urls in feeds.items():
-        per_unit = []
-        for url in urls:
-            per_unit.append({d for d in booked_nights(fetch(url)) if today <= d < horizon})
-        full = set.intersection(*per_unit) if per_unit else set()
-        styles[style] = {"units": len(urls), "booked": to_ranges(full)}
+    for style, room_id in ROOMS.items():
+        full = {d for d in booked_nights(fetch(FEED.format(room_id))) if today <= d < horizon}
+        styles[style] = {"units": UNITS_PER_STYLE, "booked": to_ranges(full)}
 
     data = {"updated": dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat(),
             "styles": styles}

@@ -452,7 +452,7 @@
     });
   }
 
-  /* ---------- Availability calendars (synced from Your.Rentals) ---------- */
+  /* ---------- Availability calendars (synced from Beds24) ---------- */
   // assets/data/availability.json is refreshed by a scheduled GitHub Action.
   // A night is booked when every unit of that style is taken; ranges are
   // [first night, checkout day) like iCal.
