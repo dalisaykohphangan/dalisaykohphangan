@@ -2677,9 +2677,14 @@ html body .flatpickr-calendar .flatpickr-current-month input.cur-year {
 }
 
 .cal-day.is-booked {
-  color: var(--cream-faint);
-  background: rgba(192, 106, 62, 0.28);
+  color: var(--cream);
+  background: var(--clay);
   text-decoration: line-through;
+}
+
+.cal-day.is-past.is-booked {
+  color: var(--cream-faint);
+  background: rgba(192, 106, 62, 0.35);
 }
 
 .availability__legend {
@@ -2700,5 +2705,5 @@ html body .flatpickr-calendar .flatpickr-current-month input.cur-year {
 
 .availability__key--booked {
   margin-left: 0.9rem;
-  background: rgba(192, 106, 62, 0.45);
+  background: var(--clay);
 }
