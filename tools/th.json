@@ -282,9 +282,17 @@
  "Ask a question": "สอบถามข้อมูล",
  "Book online": "จองออนไลน์",
  "Check dates &amp; book": "เลือกวันที่และจอง",
- "Choose your dates, see the price and send a booking request. We'll confirm by email, then ask for a deposit by bank transfer.": "เลือกวันที่ ดูราคา และส่งคำขอจอง เราจะยืนยันทางอีเมล จากนั้นจะขอให้ชำระเงินมัดจำผ่านการโอนเงินผ่านธนาคาร",
  "Comfortable one-bedroom bungalow featuring a king-size bed, air-conditioning, fully equipped kitchen, smart TV, high-speed WiFi, a dining table, and a large private terrace with plenty of seating. Electricity and cleaning are included, at no extra cost.": "บังกะโลหนึ่งห้องนอนแสนสบาย พร้อมเตียงคิงไซส์ เครื่องปรับอากาศ ครัวครบครัน สมาร์ททีวี WiFi ความเร็วสูง โต๊ะรับประทานอาหาร และระเบียงส่วนตัวกว้างขวางพร้อมที่นั่งมากมาย รวมค่าไฟฟ้าและค่าทำความสะอาดแล้ว ไม่มีค่าใช้จ่ายเพิ่มเติม",
  "Included": "รวมในราคา",
  "Electricity &amp; cleaning": "ค่าไฟฟ้าและค่าทำความสะอาด",
- "Minimum stay 30 days. Electricity and cleaning included. Dalisay is adults only.": "เข้าพักขั้นต่ำ 30 วัน รวมค่าไฟฟ้าและค่าทำความสะอาดแล้ว Dalisay รับเฉพาะผู้ใหญ่"
+ "Minimum stay 30 days. Electricity and cleaning included. Dalisay is adults only.": "เข้าพักขั้นต่ำ 30 วัน รวมค่าไฟฟ้าและค่าทำความสะอาดแล้ว Dalisay รับเฉพาะผู้ใหญ่",
+ "Choose your dates, see the price and pay securely by card. Your booking is confirmed straight away.": "เลือกวันที่ ดูราคา และชำระเงินอย่างปลอดภัยด้วยบัตร การจองของคุณจะได้รับการยืนยันทันที",
+ "Booking &amp; cancellation": "การจองและการยกเลิก",
+ "Booking & cancellation": "การจองและการยกเลิก",
+ "The full rent is paid by card when you book.": "ชำระค่าเช่าเต็มจำนวนด้วยบัตรเมื่อทำการจอง",
+ "Free cancellation up to 14 days before check-in, with a full refund.": "ยกเลิกฟรีได้ถึง 14 วันก่อนวันเช็คอิน พร้อมคืนเงินเต็มจำนวน",
+ "Less than 14 days before check-in, or no-show: no refund.": "ยกเลิกน้อยกว่า 14 วันก่อนวันเช็คอิน หรือไม่มาเข้าพัก: ไม่คืนเงิน",
+ "Leaving early: unused nights are not refunded.": "ออกก่อนกำหนด: ไม่คืนเงินสำหรับคืนที่ไม่ได้พัก",
+ "Refunds go back to your card, normally within 7 days.": "เงินคืนจะโอนกลับเข้าบัตรของคุณ โดยปกติภายใน 7 วัน",
+ "A refundable security deposit (10,000 THB for 1 month, 20,000 THB for 2 months or more) is paid on arrival.": "ชำระเงินประกันที่ขอคืนได้ (10,000 บาท สำหรับ 1 เดือน, 20,000 บาท สำหรับ 2 เดือนขึ้นไป) ในวันเข้าพัก"
 }

@@ -2392,6 +2392,22 @@ a.cat:hover {
   max-width: 34ch;
 }
 
+.contact-aside__policy {
+  margin-top: 2rem;
+}
+
+.contact-aside__policy ul {
+  margin: 0.75rem 0 0;
+  padding-left: 1.1rem;
+  max-width: 40ch;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.contact-aside__policy li + li {
+  margin-top: 0.35rem;
+}
+
 .contact-aside__photo {
   flex: 1 1 auto;
   min-height: 320px;
