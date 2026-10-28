@@ -145,7 +145,7 @@ def write(filename, body_class, main, meta_title, meta_desc, editorial=False):
     if editorial:
         # Editorial guide pages add a heavy condensed display face and a handwriting face.
         html = html.replace("&display=swap",
-                            "&family=Barlow+Condensed:wght@600;800&family=Caveat:wght@500;700&display=swap", 1)
+                            "&family=Barlow+Condensed:wght@400;500;600&family=Caveat:wght@500;700&display=swap", 1)
     html = re.sub(r"<title>.*?</title>", f"<title>{meta_title}</title>", html)
     for attr in ('name="description"', 'property="og:description"'):
         html = re.sub(r'(<meta %s content=")[^"]*' % attr, lambda m: m.group(1) + meta_desc, html)
@@ -198,13 +198,11 @@ def ed_section(num, gid, title, intro, items, note):
     return h + '  </div>\n</section>\n\n'
 
 
-def ed_page(filename, body_class, title_html, intro, scribble, hero_stickers, other, parts, cta,
+def ed_page(filename, body_class, title_html, intro, scribble, hero_photo, other, parts, cta,
             meta_title, meta_desc):
     guides = [g for _, gs in parts for g in gs]
     count = sum(len(g[3]) for g in guides)
     index = "".join(f'<a href="#{g[0]}"><span>{i + 1:02d}</span>{SHORT[g[0]]}</a>' for i, g in enumerate(guides))
-    stickers = "".join(sticker(n, f"ed-hero__sticker ed-hero__sticker--{k}", t)
-                       for k, (n, t) in enumerate(hero_stickers, 1))
     main = f"""<main id="main">
 
 <section class="ed-hero">
@@ -212,7 +210,7 @@ def ed_page(filename, body_class, title_html, intro, scribble, hero_stickers, ot
     <div class="ed-meta"><span>Dalisay island guide</span><span>Koh Phangan</span><span>Places we love</span></div>
     <div class="ed-hero__stage">
       <h1 class="ed-title">{title_html}</h1>
-      {stickers}
+      <figure class="ed-hero__photo"><img src="{hero_photo[0]}" alt="{hero_photo[1]}" width="1200" height="800" decoding="async"></figure>
     </div>
     <div class="ed-hero__foot">
       <p class="ed-lede">{intro}</p>
@@ -249,7 +247,7 @@ ed_page("todo.html", "page-guide--todo",
         "Things<br>to do",
         "Our favourite beaches, hikes, boat trips and ways to stay active or unwind on Koh Phangan.",
         "go explore ↓",
-        [("palm", -8), ("longtail", 6), ("sun-waves", -4)],
+        ("assets/img/guide/beaches.jpg", "Clear turquoise water, granite boulders and a longtail boat in a Koh Phangan bay"),
         ("food.html", "Eat &amp; drink"),
         [("Part one: explore the island", EXPLORE), ("Part two: stay active &amp; unwind", WELL)],
         ("Tell us what you enjoy",
@@ -261,7 +259,7 @@ ed_page("food.html", "page-guide--food",
         "Eat &amp;<br>drink",
         "Where we eat on Koh Phangan, from a coffee a few minutes from Dalisay to night markets, Thai kitchens and sunset bars.",
         "our favourite spots ↓",
-        [("dragonfruit", 7), ("chili", -10), ("noodles", 5)],
+        ("assets/img/guide/markets.jpg", "A street food vendor grilling skewers at a market stall"),
         ("todo.html", "Things to do"),
         [("", FOOD)],
         ("Hungry for more ideas?",

@@ -3009,10 +3009,10 @@ body.page-guide--food {
   --ed-rule: rgba(253, 250, 244, 0.35);
 }
 
-/* Things to do page: bold warm jungle green; pale warm yellow accents. */
+/* Things to do page: deep blue-green; pale warm yellow accents. */
 body.page-ed.page-guide--todo {
   --ed-accent: #efe3a4;
-  background-color: #4b7a2a;
+  background-color: #2e4d43;
 }
 
 /* Food page: vivid red-orange (deep enough for cream text). */
@@ -3067,24 +3067,46 @@ body.page-ed {
 }
 
 .ed-title {
+  --size: clamp(5rem, 21vw, 17rem);
+  position: relative;
+  z-index: 1;
   margin: clamp(1rem, 3vw, 2rem) 0 0;
   font-family: var(--ed-display);
-  font-size: clamp(5.2rem, 23vw, 19rem);
-  font-weight: 800;
-  line-height: 0.8;
-  letter-spacing: -0.01em !important;
+  font-size: var(--size);
+  font-weight: 500;
+  line-height: 0.82;
+  letter-spacing: 0.005em !important;
   text-transform: uppercase;
 }
 
-.ed-hero__sticker {
-  position: absolute;
-  width: clamp(5rem, 15vw, 13rem);
-  height: auto;
+/* Poster-style hero: the photo slides up under the last line of the title. */
+.ed-hero__photo {
+  position: relative;
+  width: 88%;
+  margin: calc(clamp(5rem, 21vw, 17rem) * -0.42) 0 0 auto;
+  aspect-ratio: 16 / 8;
+  overflow: hidden;
 }
 
-.ed-hero__sticker--1 { right: 2%; top: 4%; }
-.ed-hero__sticker--2 { right: 22%; top: 48%; width: clamp(4rem, 11vw, 9rem); }
-.ed-hero__sticker--3 { right: 4%; bottom: -6%; width: clamp(4.5rem, 12vw, 10rem); }
+.ed-hero__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.85) contrast(0.95) brightness(1.03);
+}
+
+/* Same paper grain as the page, so the photo looks printed. */
+.ed-hero__photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .18 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .ed-hero__photo { width: 100%; aspect-ratio: 4 / 3; }
+}
 
 .ed-hero__foot {
   display: grid;
@@ -3115,7 +3137,7 @@ body.page-ed {
 .ed-switch {
   font-family: var(--ed-display);
   font-size: 1.3rem;
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: 0.04em !important;
   text-transform: uppercase;
   text-decoration: none;
@@ -3163,7 +3185,7 @@ body.page-ed {
   border-bottom: 2px solid var(--ed-ink);
   font-family: var(--ed-display);
   font-size: clamp(1.1rem, 2vw, 1.5rem);
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: 0.12em;
   text-align: center;
   text-transform: uppercase;
@@ -3188,10 +3210,10 @@ body.page-ed {
 .ed-num {
   font-family: var(--ed-display);
   font-size: clamp(3rem, 8vw, 6.5rem);
-  font-weight: 800;
+  font-weight: 500;
   line-height: 0.8;
   color: transparent;
-  -webkit-text-stroke: 2px var(--ed-ink);
+  -webkit-text-stroke: 1.5px var(--ed-ink);
 }
 
 .ed-sec__title {
@@ -3199,7 +3221,7 @@ body.page-ed {
   padding-right: clamp(5rem, 14vw, 11rem);
   font-family: var(--ed-display);
   font-size: clamp(2.6rem, 8.5vw, 7rem);
-  font-weight: 800;
+  font-weight: 500;
   line-height: 0.85;
   letter-spacing: -0.005em !important;
   text-transform: uppercase;
@@ -3257,7 +3279,7 @@ body.page-ed {
   margin: 0;
   font-family: var(--ed-display);
   font-size: clamp(1.5rem, 2.2vw, 1.9rem);
-  font-weight: 800;
+  font-weight: 500;
   line-height: 0.95;
   letter-spacing: 0.01em !important;
   text-transform: uppercase;
@@ -3317,12 +3339,10 @@ body.page-ed {
   margin: 0;
   font-family: var(--ed-display);
   font-size: clamp(3rem, 11vw, 9rem);
-  font-weight: 800;
+  font-weight: 500;
   line-height: 0.85;
   letter-spacing: -0.005em !important;
   text-transform: uppercase;
 }
 
-@media (max-width: 600px) {
-  .ed-hero__sticker--2 { display: none; }
-}
+
