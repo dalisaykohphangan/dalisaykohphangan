@@ -3431,3 +3431,21 @@ body.page-ed {
 .page-info .ed-calls__nums a {
   border-bottom-width: 1px;
 }
+
+/* ...and smaller, so it reads as a calm reference page. */
+.page-info .ed-title {
+  font-size: clamp(3.4rem, 12vw, 9rem);
+}
+
+.page-info .ed-num {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+}
+
+.page-info .ed-sec__title {
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.page-info .ed-calls__name,
+.page-info .ed-calls__nums a {
+  font-size: clamp(1.15rem, 1.8vw, 1.5rem);
+}
