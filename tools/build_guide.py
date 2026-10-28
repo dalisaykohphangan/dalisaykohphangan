@@ -92,7 +92,7 @@ def page(filename, body_class, eyebrow, title_html, intro, other, groups, cta, m
       <h1 class="display page-hero__title">{title_html}</h1>
       <p>{intro}</p>
     </div>
-    <div class="guide-hero__actions"><a class="btn btn--emergency" href="#emergency">Emergency contacts</a><a class="btn btn--ghost" href="{other_href}">{other_label}</a></div>
+    <div class="guide-hero__actions"><a class="btn btn--ghost" href="{other_href}">{other_label}</a></div>
     <nav class="guide-index" aria-label="On this page">{index}</nav>
   </div>
 </section>
@@ -102,7 +102,7 @@ def page(filename, body_class, eyebrow, title_html, intro, other, groups, cta, m
     for sid, eb, heading, aside, gs in groups:
         main += group(sid, eb, heading, aside, gs, n)
         n += len(gs)
-    main += EMERGENCY + f'''<section class="section guide-cta">
+    main += f'''<section class="section guide-cta">
   <div class="wrap cta">
     <p class="eyebrow eyebrow--plain">Need a hand?</p>
     <h2 class="display">{cta[0]}</h2>
@@ -113,6 +113,11 @@ def page(filename, body_class, eyebrow, title_html, intro, other, groups, cta, m
 
 </main>'''
 
+    write(filename, body_class, main, meta_title, meta_desc)
+    print(f"{filename}: {sum(len(g[3]) for g in guides)} places")
+
+
+def write(filename, body_class, main, meta_title, meta_desc):
     html = re.sub(r'<main id="main">.*?</main>', lambda m: main, TEMPLATE, flags=re.S)
     html = re.sub(r"<title>.*?</title>", f"<title>{meta_title}</title>", html)
     for attr in ('name="description"', 'property="og:description"'):
@@ -125,7 +130,6 @@ def page(filename, body_class, eyebrow, title_html, intro, other, groups, cta, m
     html = html.replace(' aria-current="page"', "")
     html = re.sub(r"<body[^>]*>", f'<body class="page-guide {body_class}">', html, count=1)
     open(os.path.join(REPO, filename), "w", encoding="utf-8").write(html)
-    print(f"{filename}: {sum(len(g[3]) for g in guides)} places")
 
 
 page("todo.html", "page-guide--todo", "Island guide",
@@ -139,7 +143,7 @@ page("todo.html", "page-guide--todo", "Island guide",
      ("Tell us what <em>you enjoy</em>.",
       "We'll help you plan your days, arrange boat trips and diving, and point you to the right trail."),
      "Things to Do — Dalisay Koh Phangan",
-     "Dalisay's guide to things to do on Koh Phangan: beaches, hikes, waterfalls, boat trips, gyms, yoga, spas and emergency numbers.")
+     "Dalisay's guide to things to do on Koh Phangan: beaches, hikes, waterfalls, boat trips, gyms, yoga and spas.")
 
 page("food.html", "page-guide--food", "Island guide",
      "Eat <em>&amp; drink</em>.",
@@ -151,3 +155,34 @@ page("food.html", "page-guide--food", "Island guide",
       "Tell us what you feel like and we'll point you to our favourite spot for it."),
      "Eat & Drink — Dalisay Koh Phangan",
      "Dalisay's favourite places to eat and drink on Koh Phangan: cafes near Hin Kong, Thai food, night markets, bakeries and sunset bars.")
+
+write("info.html", "page-info", """<main id="main">
+
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">Emergency &amp; things to know</p>
+    <div class="page-hero__row">
+      <h1 class="display page-hero__title">Good <em>to know</em>.</h1>
+      <p>Emergency numbers, and soon our trusted contacts for ferries, taxis and getting around the island.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="emergency emergency--page">
+      <div class="emergency__head">
+        <h2 class="h3">At Dalisay</h2>
+        <p>For property emergencies, voice call us any time on WhatsApp or by phone.</p>
+      </div>
+      <ul class="emergency__list">
+        <li><span>Dalisay</span><a href="tel:+66616970716">+66 61 697 0716</a><a href="https://wa.me/66616970716" target="_blank" rel="noopener">WhatsApp</a></li>
+      </ul>
+    </div>
+""" + EMERGENCY.split('<div class="emergency" id="emergency">', 1)[1].split("    </div>\n  </div>\n</section>", 1)[0].join(
+    ['    <div class="emergency emergency--page">', "    </div>\n"]) + """  </div>
+</section>
+
+</main>""", "Emergency & Things to Know — Dalisay Koh Phangan",
+      "Emergency numbers on Koh Phangan (Dalisay, hospitals, police and tourist police) and practical tips for your stay.")
+print("info.html written")

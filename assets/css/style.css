@@ -2933,3 +2933,14 @@ body.page-guide--food {
 .guide-cta {
   border-top: 1px solid var(--line);
 }
+
+/* Emergency & things to know page (info.html): panels on the dark page */
+.page-info .emergency--page {
+  background: var(--moss);
+  margin-top: 0;
+}
+
+.page-info .emergency--page + .emergency--page {
+  margin-top: clamp(1rem, 2vw, 1.5rem);
+}
+
