@@ -3414,3 +3414,20 @@ body.page-ed {
   padding-bottom: clamp(4rem, 8vw, 7rem);
 }
 
+
+/* Emergency page uses a lighter weight than the guide pages. */
+.page-info .ed-title,
+.page-info .ed-num,
+.page-info .ed-sec__title,
+.page-info .ed-calls__name,
+.page-info .ed-calls__nums a {
+  font-weight: 400;
+}
+
+.page-info .ed-num {
+  -webkit-text-stroke-width: 1px;
+}
+
+.page-info .ed-calls__nums a {
+  border-bottom-width: 1px;
+}
