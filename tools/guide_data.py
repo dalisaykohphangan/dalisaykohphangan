@@ -115,11 +115,13 @@ WELL = [
   ("M19 Muay Thai", "Thong Sala", "A top-rated Muay Thai gym with classes for every level, from first-timers to fighters.", [("", "M19 Muay Thai Koh Phangan|ChIJfX7a97f9VDAR00HRVPLEuf4")]),
   ("Ninja Camp", "Baan Tai", "A Muay Thai gym and dojo. Contact the camp for current classes and training options.", [("", "Ninja Camp Dojo Muay Thai Koh Phangan")]),
  ], None),
- ("padel", "Padel &amp; climbing", "Social games and bouldering sessions.", [
+ ("padel", "Sports &amp; games", "Padel, bouldering, archery and mini golf.", [
   ("Zen Padel Phangan", "Hin Kong", "A social padel club offering court bookings, coaching and opportunities to meet other players.", [("", "Zen Padel Phangan")]),
   ("RTF Padel Club", "Wok Tum", "Covered padel courts with a cafe area. An option for games, training and social padel.", [("", "RTF Padel Club Koh Phangan")]),
   ("UPSIDE Bouldering Gym", "Maduea Wan", "Indoor bouldering on low climbing walls above padded mats. A fun option for a workout and practising climbing technique.", [("", "Upside Bouldering Gym Koh Phangan")]),
   ("GRIP Climb &amp; Cafe", "Thong Sala", "A climbing gym and cafe near the pier. Combine a climbing session with a coffee afterwards!", [("", "GRIP Climb Cafe Koh Phangan")]),
+  ("First Bow &amp; Arrow Club", "Near Chaloklum", "Try your hand at archery in the hills near Chaloklum. A fun, different way to spend an afternoon.", [("", "First Bow Arrow Club Koh Phangan|ChIJiwgIMDwCVTARbzswIY6iSKc")]),
+  ("Mini Golf", "Maduea Wan", "A relaxed round of mini golf in a leafy garden. Easy fun for a lazy afternoon.", [("", "Mini Golf Koh Phangan|ChIJCZ1Gnwr-VDARKSnRoU_DA9s")]),
  ], "Contact each venue directly for current schedules, day passes, equipment rental and bookings."),
  ("yoga", "Yoga", "Classes, retreats and quiet practice around the island.", [
   ("Orion Healing Centre", "Sri Thanu", "A beachfront wellness centre offering yoga classes, meditation and retreats.", [("", "Orion Healing Centre Koh Phangan")]),

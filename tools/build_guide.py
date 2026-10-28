@@ -22,7 +22,7 @@ TEMPLATE = open(os.path.join(REPO, "about.html"), encoding="utf-8").read()
 SHORT = {"beaches": "Beaches", "hikes": "Hikes &amp; waterfalls", "boats": "Boat trips",
          "nearby": "Near Dalisay", "thai": "Thai food", "markets": "Night markets",
          "coffee": "Coffee &amp; bakeries", "world": "Western food", "bars": "Viewpoints &amp; drinks",
-         "fitness": "Gyms", "muaythai": "Muay Thai", "padel": "Padel &amp; climbing",
+         "fitness": "Gyms", "muaythai": "Muay Thai", "padel": "Sports &amp; games",
          "yoga": "Yoga", "spa": "Massage &amp; spa"}
 
 EMERGENCY = '''<section class="section guide-group guide-group--emergency">
