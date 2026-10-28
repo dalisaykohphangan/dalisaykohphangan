@@ -2425,19 +2425,41 @@ a.cat:hover {
   flex-direction: column;
 }
 
-/* Book online sits at the top of the enquiry box; the form follows below a divider. */
-.contact-aside__book {
-  margin-bottom: 2.25rem;
+/* Right column: a Book now row above the enquiry box, same width as the box.
+   A square golden button on the left, the booking note filling the rest. */
+.contact-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
 
-.form__or {
-  padding-top: 2.25rem;
-  border-top: 1px solid var(--line);
+.contact-main .form {
+  flex: 1 1 auto;
 }
 
-.contact-aside__book .muted {
-  margin: 1rem 0 0;
-  max-width: 34ch;
+.book-row {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+}
+
+.book-row__btn {
+  /* At least square; grows taller if the note beside it wraps onto more lines. */
+  width: clamp(7.5rem, 11vw, 9.5rem);
+  min-height: clamp(7.5rem, 11vw, 9.5rem);
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+}
+
+.book-row__text {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 1.25rem clamp(1.25rem, 3vw, 2rem);
+  background: var(--olive);
+  color: var(--cream-dim);
+  line-height: 1.6;
 }
 
 .contact-aside__policy {
