@@ -128,6 +128,7 @@ WELL = [
   ("Pyramid Yoga", "Haad Yao Hills", "A yoga centre surrounded by jungle, offering classes, workshops, retreats and teacher training.", [("", "Pyramid Yoga Koh Phangan")]),
   ("The Yoga Retreat", "Northwest coast", "A peaceful jungle setting for yoga practice, individual classes, retreats and teacher training.", [("", "The Yoga Retreat Koh Phangan")]),
   ("Wonderland Healing Center", "", "A retreat centre in the island's green interior, with yoga, meditation and wellness programmes. Ask about current options for visiting guests.", [("", "Wonderland Healing Center Koh Phangan")]),
+  ("La Casa Shambala", "Maduea Wan", "A peaceful yoga and wellness centre with classes, retreats and acupuncture, plus a friendly community feel and delicious vegan food.", [("", "La Casa Shambala Koh Phangan|ChIJnxIfUOD9VDARuxAhdeTB7K0")]),
   ("The Sanctuary", "Haad Tien East", "Yoga classes and retreats in a secluded beach setting. Make a day of it and ask about boat access before heading over.", [("", "The Sanctuary Thailand Haad Tien Koh Phangan")]),
  ], "Check each centre's current timetable for class styles, levels, drop-in availability and booking details."),
  ("spa", "Massage, spas &amp; saunas", "From local Thai massage to onsen and ice baths.", [
