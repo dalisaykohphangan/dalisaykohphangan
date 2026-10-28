@@ -64,7 +64,7 @@ FOOD = [
  ("coffee", "Coffee, breakfast &amp; bakeries", "Specialty coffee, brunch, fresh bread and pastries.", [
   ("Young Son Cafe", "Wok Tum", "Specialty coffee and a peaceful spot to start your morning.", [("", "Young Son Cafe Koh Phangan")]),
   ("Balance Specialty Coffee", "Maduea Wan", "Specialty coffee and brunch. A nice stop while exploring the island.", [("", "Balance Specialty Coffee Koh Phangan")]),
-  ("Bubba's Coffee", "3 locations", "Specialty coffee, breakfast and brunch, with three locations around the island.", [("Thong Sala", "Bubbas Coffee Thong Sala Koh Phangan"), ("Baan Tai", "Bubbas Coffee Baan Tai Koh Phangan"), ("All locations", "Bubbas Coffee Koh Phangan")]),
+  ("Bubba's Coffee", "3 locations", "Specialty coffee, breakfast and brunch, with three locations around the island.", [("Thong Sala", "Bubbas Coffee Thong Sala Koh Phangan"), ("Baan Tai", "Bubbas Coffee Baan Tai Koh Phangan"), ("Haad Yao", "Bubbas Roastery Haad Yao Koh Phangan")]),
   ("Cookies", "2 locations", "A relaxed spot for good coffee and a hearty breakfast.", [("Hin Kong", "Cookies Cafe Hin Kong Koh Phangan"), ("Sri Thanu", "Cookies Cafe Sri Thanu Koh Phangan")]),
   ("Pura Vida Cafe", "2 locations", "Breakfast, brunch and coffee, with vegetarian and vegan options. There's a second cafe at Haad Yao beach.", [("Hin Kong", "Pura Vida Cafe Hin Kong Koh Phangan"), ("Haad Yao", "Pura Vida Cafe Haad Yao Koh Phangan")]),
   ("Indigo Specialty Coffee &amp; Bakery", "Hin Kong", "A lovely spot for coffee, breakfast, brunch and freshly baked treats.", [("", "Indigo Specialty Coffee Bakery Koh Phangan")]),
