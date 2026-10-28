@@ -1477,10 +1477,10 @@ html[lang="th"] li {
 .bungalow__thai {
   display: block;
   margin-top: 0.75rem;
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 1.1rem;
+  font-weight: 400;
   letter-spacing: 0.02em;
-  color: var(--cream);
+  color: var(--cream-dim);
 }
 
 .bungalow__price {
