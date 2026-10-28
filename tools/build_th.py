@@ -133,7 +133,8 @@ def build_page(page, dic, missing):
                 tag = re.sub(r'content="([^"]*)"', repc, tag)
         # Asset and page paths: th/ sits one folder down.
         tag = re.sub(r'((?:src|href|srcset|data-full)=")(assets/)', r"\1../\2", tag)
-        tag = re.sub(r'(href=")(discover\.html)', r"\1../\2", tag)
+        # Pages that only exist in English (the island guide) link back up to them.
+        tag = re.sub(r'(href=")(discover\.html|todo\.html|food\.html)', r"\1../\2", tag)
         return tag
     html = re.sub(r"<[^>]+>", fix_tag, html)
 

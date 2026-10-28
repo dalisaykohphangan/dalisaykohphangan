@@ -158,6 +158,8 @@ def write(filename, body_class, main, meta_title, meta_desc, editorial=False):
     html = re.sub(r'\s*<link rel="alternate" hreflang="[^"]*" href="[^"]*">', "", html)
     html = re.sub(r'\s*<a class="lang-switch"[^>]*>[^<]*</a>', "", html)
     html = html.replace(' aria-current="page"', "")
+    # Header and mobile menu: highlight Island Guide (the footer link stays plain).
+    html = html.replace('<a href="todo.html">Island Guide</a>', '<a href="todo.html" aria-current="page">Island Guide</a>', 2)
     extra = " page-ed" if editorial else ""
     html = re.sub(r"<body[^>]*>", f'<body class="page-guide{extra} {body_class}">', html, count=1)
     open(os.path.join(REPO, filename), "w", encoding="utf-8").write(html)
