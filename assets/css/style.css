@@ -3461,7 +3461,7 @@ body.page-home {
 }
 
 .page-home .bg-deep {
-  background: #18302b;
+  background: #172e28;
 }
 
 /* Home page section headings in capitals (normal spacing, not the logo's wide tracking). */
@@ -3471,7 +3471,7 @@ body.page-home {
   letter-spacing: -0.01em;
 }
 
-/* Home page: dark green panels instead of the light olive ones. */
+/* Home page: panels a few shades darker than the blue-green background. */
 .page-home .bg-olive {
-  background: var(--forest);
+  background: #172e28;
 }
