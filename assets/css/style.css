@@ -802,12 +802,15 @@ html[lang="th"] li {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(9, 23, 20, 0.6) 0%,
-    rgba(9, 23, 20, 0.2) 40%,
-    rgba(9, 23, 20, 0.9) 100%
-  );
+  /* Darker on the left, where the heading and intro sit, so busy photos stay readable. */
+  background:
+    linear-gradient(90deg, rgba(9, 23, 20, 0.6), rgba(9, 23, 20, 0) 70%),
+    linear-gradient(
+      180deg,
+      rgba(9, 23, 20, 0.6) 0%,
+      rgba(9, 23, 20, 0.2) 40%,
+      rgba(9, 23, 20, 0.9) 100%
+    );
 }
 
 .page-hero .wrap {
