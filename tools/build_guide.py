@@ -298,7 +298,12 @@ def ed_calls(num, title, intro, rows):
 """
 
 
-write("info.html", "page-info", """<main id="main">
+# Emergency & things to know page: parked for now (user: "save it for future use").
+# Set to True to build info.html again; the full page is also on branch info-page-draft.
+BUILD_INFO = False
+
+if BUILD_INFO:
+  write("info.html", "page-info", """<main id="main">
 
 <section class="ed-hero">
   <div class="wrap">
@@ -314,4 +319,4 @@ write("info.html", "page-info", """<main id="main">
       "Emergency & Things to Know — Dalisay Koh Phangan",
       "Emergency numbers on Koh Phangan (Dalisay, hospitals, police and tourist police) and practical tips for your stay.",
       editorial=True)
-print("info.html written")
+  print("info.html written")
