@@ -46,7 +46,10 @@ EMERGENCY = '''<section class="section guide-group guide-group--emergency">
 
 
 def maps(q):
-    return "https://www.google.com/maps/search/?api=1&amp;query=" + urllib.parse.quote_plus(q)
+    # "Name|ChIJ..." pins the link to one Google place when a plain search finds the wrong one.
+    q, _, place_id = q.partition("|")
+    url = "https://www.google.com/maps/search/?api=1&amp;query=" + urllib.parse.quote_plus(q)
+    return url + ("&amp;query_place_id=" + place_id if place_id else "")
 
 
 def place(name, where, desc, links):
