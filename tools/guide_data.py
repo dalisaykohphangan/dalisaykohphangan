@@ -59,10 +59,9 @@ FOOD = [
   ("Pork Leg Restaurant", "Thong Sala", "A simple local spot for braised pork leg and Thai noodle soup.", [("", "Pork Leg Restaurant Koh Phangan")]),
   ("Uncle Teum's Duck Noodle &amp; Crispy Pork", "Maduea Wan", "A local favourite for duck noodles and crispy pork, with seats around a little pond and waterfall. Go early, as it closes when the food runs out.", [("", "Uncle Teum's Duck Noodle Crispy Pork Koh Phangan")]),
  ], None),
- ("markets", "Night markets &amp; street food", "Two weekly night markets worth planning your evening around, plus a daily food market in Thong Sala.", [
+ ("markets", "Night markets &amp; street food", "Two weekly markets worth planning your evening around.", [
   ("Saturday Night Market", "Thong Sala", "Explore the walking street on Saturday evening for street food, sweet treats, shopping and a lively atmosphere.", [("", "Thong Sala Saturday Walking Street Koh Phangan")]),
   ("Sunday Night Market", "Chaloklum", "Visit the fishing village on Sunday evening for food stalls, desserts and a lovely atmosphere by the waterfront.", [("", "Sunday Market Chaloklum Koh Phangan")]),
-  ("Thong Sala Food Market", "Thong Sala", "The everyday market near the pier, with street food stalls, fresh fruit and local snacks. Handy any day of the week.", [("", "Thong Sala Local Market Koh Phangan|ChIJVZeWPmH_VDARCKrfCERuNWw")]),
  ], None),
  ("coffee", "Coffee, breakfast &amp; bakeries", "Specialty coffee, brunch, fresh bread and pastries.", [
   ("Young Son Cafe", "Wok Tum", "Specialty coffee and a peaceful spot to start your morning.", [("", "Young Son Cafe Koh Phangan")]),
