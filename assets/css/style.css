@@ -2436,7 +2436,7 @@ a.cat:hover {
 }
 
 .contact-aside__book .muted {
-  margin: 0.75rem 0 1.25rem;
+  margin: 1rem 0 0;
   max-width: 34ch;
 }
 
