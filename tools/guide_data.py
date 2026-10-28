@@ -73,14 +73,16 @@ FOOD = [
   ("LOAF and VINE", "Hin Kong", "A stop for bread and delicatessen treats, including meats and smoked fish.", [("", "LOAF and VINE Koh Phangan")]),
   ("Satimi's Ice Cream", "Thong Sala", "Stop for homemade ice cream, gelato and fruity sorbets while exploring town.", [("", "Satimi Ice Cream Koh Phangan")]),
  ], None),
- ("world", "Western food", "Italian, sushi, burgers and pub food for when you fancy something different.", [
+ ("world", "Western food", "Italian, Middle Eastern, sushi, burgers and pub food for when you fancy something different.", [
   ("DAO", "Thong Sala", "Progressive Levantine-Thai cuisine by Chef Nir Mesika. Fine dining, perfect for date night.", [("", "DAO Restaurant Thong Sala Koh Phangan")]),
   ("NENA Locanda Italiana", "Wok Tum", "Italian dining with pasta, Mediterranean flavours and wine.", [("", "NENA Locanda Italiana Koh Phangan")]),
   ("Ristorante Rimini", "Chaloklum", "Italian food with a focus on fish, seafood and pasta. A lovely dinner stop.", [("", "Ristorante Rimini Koh Phangan")]),
   ("Caffe Della Moca", "Chaloklum", "Italian food, pizza and pasta by the water. A lovely option for dinner.", [("", "Caffe Della Moca Koh Phangan")]),
   ("Wasabi", "2 locations", "Sushi, sashimi and Japanese food, in town at Thong Sala or on the west coast at Haad Son.", [("Thong Sala", "Wasabi Thong Sala Koh Phangan"), ("Haad Son", "Wasabi Haad Son Koh Phangan")]),
   ("Salt", "Thong Sala", "Fresh seafood and creative fusion sushi in a stylish setting. A lovely choice for date night.", [("", "Salt Restaurant Thong Sala Koh Phangan")]),
+  ("Taboon", "Sri Thanu", "Middle Eastern food in a green house with a big garden patio. Come for hummus, falafel and mezze, and save room for the homemade ice cream.", [("", "Taboon Srithanu Koh Phangan")]),
   ("The Lakehouse", "Sri Thanu", "A relaxed lakeside restaurant and pub for a casual meal and drinks with friends.", [("", "The Lakehouse Restaurant Pub Koh Phangan")]),
+  ("Belgian Beer Bistro", "Haad Chao Phao", "Moules frites, hearty Belgian dishes and a long list of Belgian beers, right on the beach.", [("", "Belgian Beer Bistro Haad Chao Phao Koh Phangan")]),
   ("Mythai Burgers", "2 locations", "Burgers and fries, in town at Thong Sala or after exploring the northern beaches at Chaloklum.", [("Thong Sala", "Mythai Burgers Thong Sala Koh Phangan"), ("Chaloklum", "Mythai Burgers Chaloklum Koh Phangan")]),
   ("SOHO", "Thong Sala", "Burgers, pub food, craft beer and sports.", [("", "SOHO Bar Phangan")]),
   ("The Ugly Duckling", "Thong Sala", "An Irish pub for a casual meal and drinks.", [("", "The Ugly Duckling Koh Phangan")]),
