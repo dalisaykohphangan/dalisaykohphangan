@@ -49,7 +49,7 @@ FOOD = [
   ("Dear Phangan", "Wok Tum", "MICHELIN Guide recommended Thai dining with a seasonal menu featuring local ingredients. Reservations are essential.", [("", "Dear Phangan Koh Phangan")]),
   ("Nong Taa Ped Palo", "Wok Tum", "Super simple, cheap Thai food. A great option for a casual local meal!", [("", "Nong Taa Ped Palo Koh Phangan")]),
   ("Whum Noi Noi", "Nai Wok", "A chill spot on the beach serving authentic Thai food. Recommended for a relaxed evening meal and drinks.", [("", "Whum Noi Noi Koh Phangan")]),
-  ("The Wave Sunset Bar", "", "Thai food on a private beach and a great sunset spot. Lovely for chilling or working during the day.", [("", "The Wave Sunset Bar Koh Phangan")]),
+  ("The Wave Sunset Bar", "Sri Thanu", "Thai food on a private beach and a great sunset spot. Lovely for chilling or working during the day.", [("", "The Wave Sunset Bar Koh Phangan")]),
   ("Baan Boontom Somtum &amp; Gallery", "Thong Sala", "Thai and Isaan food in a charming wooden house with an art gallery atmosphere.", [("", "Baan Boontom Somtum Gallery Koh Phangan")]),
   ("Nong View", "Baan Tai", "Local Thai food with Southern Thai flavours.", [("", "Nong View Restaurant Koh Phangan")]),
   ("Krua Chao Koh", "Baan Tai", "Southern Thai food and seafood. A lovely choice for exploring local flavours.", [("", "Krua Chao Koh Ban Tai Koh Phangan")]),
