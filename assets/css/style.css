@@ -2944,3 +2944,34 @@ body.page-guide--food {
   margin-top: clamp(1rem, 2vw, 1.5rem);
 }
 
+/* Guide section photos: one consistent warm, muted grade plus a soft wash
+   of the page colour, so stock photos from different sources look like a set. */
+.guide__photo {
+  position: relative;
+  margin: clamp(1.25rem, 2.5vw, 2rem) 0 0;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+}
+
+.guide__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.72) sepia(0.14) contrast(0.95) brightness(0.98);
+}
+
+.guide__photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--olive);
+  mix-blend-mode: soft-light;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.page-guide--food .guide__photo::after {
+  background: var(--clay);
+  opacity: 0.45;
+}
+

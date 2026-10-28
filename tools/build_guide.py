@@ -61,9 +61,32 @@ def place(name, where, desc, links):
     return h
 
 
+# Section photos (free Unsplash images, saved in assets/img/guide/<id>.jpg).
+PHOTOS = {
+    "beaches": "Longtail boat moored by grey rocks in clear water",
+    "hikes": "Waterfall tumbling through green jungle",
+    "boats": "Calm bay framed by tropical trees",
+    "fitness": "A pair of dumbbells on the gym floor",
+    "muaythai": "Muay Thai fighter in the ring",
+    "padel": "Player with a racket on a blue court",
+    "yoga": "Woman stretching her arms in a yoga pose",
+    "spa": "Foot massage",
+    "nearby": "Yellow chairs around tables on the sand",
+    "thai": "Spread of Thai dishes",
+    "markets": "Street food vendor cooking at her stall",
+    "coffee": "Toast topped with avocado and vegetables",
+    "world": "Close-up of a burger",
+    "bars": "Two people in a boat on the sea at sunset, Koh Phangan",
+}
+
+
 def guide(num, gid, title, intro, items, note):
+    photo = ""
+    if gid in PHOTOS:
+        photo = (f'        <figure class="guide__photo"><img src="assets/img/guide/{gid}.jpg" alt="{PHOTOS[gid]}" '
+                 f'width="1200" height="800" loading="lazy" decoding="async"></figure>\n')
     h = (f'    <div class="guide" id="{gid}">\n      <div class="guide__head">\n        <span class="num">{num:02d}</span>\n'
-         f'        <h2 class="h3">{title}</h2>\n        <p class="muted">{intro}</p>\n      </div>\n'
+         f'        <h2 class="h3">{title}</h2>\n        <p class="muted">{intro}</p>\n{photo}      </div>\n'
          f'      <div>\n        <ul class="places">' + "".join(place(*i) for i in items) + '</ul>\n')
     if note:
         h += f'        <p class="guide__note">{note}</p>\n'
