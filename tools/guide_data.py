@@ -81,7 +81,7 @@ FOOD = [
   ("Wasabi", "2 locations", "Sushi, sashimi and Japanese food, in town at Thong Sala or on the west coast at Haad Son.", [("Thong Sala", "Wasabi Thong Sala Koh Phangan"), ("Haad Son", "Wasabi Haad Son Koh Phangan")]),
   ("Salt", "Thong Sala", "Fresh seafood and creative fusion sushi in a stylish setting. A lovely choice for date night.", [("", "Salt Restaurant Thong Sala Koh Phangan")]),
   ("Taboon", "2 locations", "Middle Eastern food. Come for hummus, falafel and mezze, and save room for the homemade ice cream.", [("Sri Thanu", "Taboon Srithanu Koh Phangan"), ("Haad Chao Phao", "Taboon Haad Chao Phao Koh Phangan")]),
-  ("The Lakehouse", "Sri Thanu", "A relaxed lakeside restaurant and pub for a casual meal and drinks with friends.", [("", "The Lakehouse Restaurant Pub Koh Phangan")]),
+  ("The Lakehouse", "Sri Thanu", "Burgers, pizza and seafood with flair, and a good cocktail menu.", [("", "The Lakehouse Restaurant Pub Koh Phangan")]),
   ("Belgian Beer Bistro", "Haad Chao Phao", "Moules frites, hearty Belgian dishes and a long list of Belgian beers, right on the beach.", [("", "Belgian Beer Bistro Haad Chao Phao Koh Phangan")]),
   ("Mythai Burgers", "2 locations", "Burgers and fries, in town at Thong Sala or after exploring the northern beaches at Chaloklum.", [("Thong Sala", "Mythai Burgers Thong Sala Koh Phangan"), ("Chaloklum", "Mythai Burgers Chaloklum Koh Phangan")]),
   ("SOHO", "Thong Sala", "Burgers, pub food, craft beer and sports, plus pool tables and shuffleboard.", [("", "SOHO Bar Phangan")]),
