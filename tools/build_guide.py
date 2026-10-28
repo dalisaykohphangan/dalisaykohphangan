@@ -209,7 +209,7 @@ def ed_page(filename, body_class, title_html, intro, scribble, hero_stickers, ot
 
 <section class="ed-hero">
   <div class="wrap">
-    <div class="ed-meta"><span>Dalisay island guide</span><span>Koh Phangan</span><span>{count} places we love</span></div>
+    <div class="ed-meta"><span>Dalisay island guide</span><span>Koh Phangan</span><span>Places we love</span></div>
     <div class="ed-hero__stage">
       <h1 class="ed-title">{title_html}</h1>
       {stickers}
