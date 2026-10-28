@@ -139,6 +139,8 @@ WELL = [
   ("Revive Massage", "Sri Thanu", "", [("", "Revive Massage Koh Phangan")]),
   ("Pure Relax", "2 locations", "A more upscale spa option.", [("Sri Thanu", "Pure Relax Spa Srithanu Koh Phangan"), ("Thong Sala", "Pure Relax Spa Thong Sala Koh Phangan")]),
   ("Pharaoh Spa", "Baan Tai", "A more upscale spa option.", [("", "Pharaoh Spa Koh Phangan")]),
+  ("Lavella Spa", "Baan Tai", "A highly rated day spa with massages, aromatherapy and a sauna.", [("", "Lavella Spa Koh Phangan|ChIJkStmjYz9VDARadulNAMf5uQ")]),
+  ("Wat Pho Herbal Steam Sauna", "Baan Tai", "A traditional herbal steam sauna at a local temple. A simple, authentic island experience.", [("", "Wat Pho Steam sauna Koh Phangan|ChIJuxTnMVL8VDARkUNaY4Zvjpw")]),
   ("Navana", "Haad Yao hills", "Japanese-style onsen.", [("", "Navana Onsen Koh Phangan")]),
   ("Arcana Wellness", "Haad Yao hills", "Spa and sauna.", [("", "Arcana Wellness Koh Phangan")]),
   ("The HealthLab", "Hin Kong", "Sauna and cold plunge.", [("", "The HealthLab Koh Phangan")]),
