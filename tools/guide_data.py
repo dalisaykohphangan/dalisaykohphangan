@@ -69,8 +69,8 @@ FOOD = [
   ("Kaif", "Chaloklum", "A beachfront cafe, restaurant and deli for coffee, breakfast, brunch or a relaxed meal overlooking the bay.", [("", "Kaif Chaloklum Koh Phangan")]),
   ("Bar Nena", "Thong Sala", "An Italian cafe and bakery for coffee, pastries, focaccia and pizza slices.", [("", "Bar Nena Koh Phangan")]),
   ("Nira's Home Bakery", "Thong Sala", "A favourite for breakfast, coffee, pastries and bread near the pier.", [("", "Niras Home Bakery Thong Sala Koh Phangan")]),
-  ("Omee Bakery", "", "Artisan bread, fresh pastries and coffee. Try a cinnamon bun, chocolate babka or a croissant!", [("", "Omee Bakery Koh Phangan")]),
-  ("LOAF and VINE", "", "A stop for bread and delicatessen treats, including meats and smoked fish.", [("", "LOAF and VINE Koh Phangan")]),
+  ("Omee Bakery", "Hin Kong", "Artisan bread, fresh pastries and coffee. Try a cinnamon bun, chocolate babka or a croissant!", [("", "Omee Bakery Koh Phangan")]),
+  ("LOAF and VINE", "Hin Kong", "A stop for bread and delicatessen treats, including meats and smoked fish.", [("", "LOAF and VINE Koh Phangan")]),
   ("Satimi's Ice Cream", "Thong Sala", "Stop for homemade ice cream, gelato and fruity sorbets while exploring town.", [("", "Satimi Ice Cream Koh Phangan")]),
  ], None),
  ("world", "Western food", "Italian, sushi, burgers and pub food for when you fancy something different.", [
