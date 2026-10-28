@@ -106,6 +106,7 @@ WELL = [
   ("Podium Gym", "Thong Sala", "A training centre with a fully equipped gym, fitness classes, CrossFit, reformer Pilates and Brazilian jiu-jitsu.", [("", "Podium Gym Koh Phangan")]),
   ("Chaloklum Bay Gym", "Chaloklum", "An option for a gym workout while staying in or exploring the north of the island.", [("", "Chaloklum Bay Gym Koh Phangan")]),
   ("Phangan Muay Thai &amp; Fitness Gym", "Thong Sala", "Muay Thai training alongside a fully equipped fitness gym with free weights, machines and cardio equipment. Welcomes beginners through to experienced fighters.", [("", "Phangan Muay Thai Koh Phangan|ChIJE_3rkH_-VDARrOsGp1Awv5M")]),
+  ("WILD WOOD Beach Fitness", "Baan Tai", "A beachfront gym with a sauna, a pool and a restaurant. Train, then cool off by the sea.", [("", "WILD WOOD Beach Fitness Koh Phangan|ChIJ2SgHLZ_9VDARxg4TN998oK0")]),
  ], None),
  ("muaythai", "Muay Thai &amp; martial arts", "From first lessons to fight camps.", [
   ("MAA · Martial Arts Academy", "Wok Tum", "Muay Thai, kickboxing, boxing and fitness classes. An option for learning technique or building your fitness.", [("", "MAA Martial Arts Academy Koh Phangan")]),
