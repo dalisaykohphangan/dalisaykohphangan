@@ -85,7 +85,7 @@ FOOD = [
   ("Belgian Beer Bistro", "Haad Chao Phao", "Moules frites, hearty Belgian dishes and a long list of Belgian beers, right on the beach.", [("", "Belgian Beer Bistro Haad Chao Phao Koh Phangan")]),
   ("Mythai Burgers", "2 locations", "Burgers and fries, in town at Thong Sala or after exploring the northern beaches at Chaloklum.", [("Thong Sala", "Mythai Burgers Thong Sala Koh Phangan"), ("Chaloklum", "Mythai Burgers Chaloklum Koh Phangan")]),
   ("SOHO", "Thong Sala", "Burgers, pub food, craft beer and sports, plus pool tables and shuffleboard.", [("", "SOHO Bar Phangan")]),
-  ("The Ugly Duckling", "Thong Sala", "An Irish pub for a casual meal and drinks.", [("", "The Ugly Duckling Koh Phangan")]),
+  ("The Ugly Duckling", "Thong Sala", "An Irish pub for a casual meal and drinks, often with live music.", [("", "The Ugly Duckling Koh Phangan")]),
  ], None),
  ("bars", "Viewpoints &amp; drinks", "Sunset drinks with a view.", [
   ("Top Rock Bar", "Nai Wok", "A hillside spot for sunset drinks and sea views. Expect a steep climb up the stairs!", [("", "Top Rock Bar Koh Phangan")]),
