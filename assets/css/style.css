@@ -3491,3 +3491,13 @@ body.page-home {
 .page-home .index-list .title {
   text-transform: uppercase;
 }
+
+/* Home page header, phone menu and footer: the same blue-green, much darker. */
+.page-home .site-header.is-solid {
+  background: rgba(14, 32, 28, 0.94);
+}
+
+.page-home .mobile-menu,
+.page-home .site-footer {
+  background: #0e201c;
+}
