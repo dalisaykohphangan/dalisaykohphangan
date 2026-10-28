@@ -51,6 +51,7 @@ FOOD = [
   ("Baan Boontom Somtum &amp; Gallery", "Thong Sala", "Thai and Isaan food in a charming wooden house with an art gallery atmosphere.", [("", "Baan Boontom Somtum Gallery Koh Phangan")]),
   ("Nong View", "Baan Tai", "Local Thai food with Southern Thai flavours.", [("", "Nong View Restaurant Koh Phangan")]),
   ("Krua Chao Koh", "Baan Tai", "Southern Thai food and seafood. A lovely choice for exploring local flavours.", [("", "Krua Chao Koh Ban Tai Koh Phangan")]),
+  ("At Chiang Mai", "Baan Tai", "A small, family-run spot for Northern Thai food. Don't miss the khao soi!", [("", "At Chiang Mai Ban Tai Koh Phangan")]),
   ("Madam Saak Thong", "Chaloklum", "A family-run restaurant serving Thai and Isaan dishes.", [("", "Madam Saak Thong Koh Phangan")]),
   ("Chicken Rice Shop", "Thong Sala", "Simple, affordable Thai comfort food. Stop for a plate of chicken rice or pork with rice.", [("", "Chicken Rice Shop Thong Sala Koh Phangan")]),
   ("Pork Leg Restaurant", "Thong Sala", "A simple local spot for braised pork leg and Thai noodle soup.", [("", "Pork Leg Restaurant Koh Phangan")]),
