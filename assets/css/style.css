@@ -3457,11 +3457,11 @@ body.page-ed {
 
 /* Home page: dark blue-green background; boxes use the lighter Things to do blue-green. */
 body.page-home {
-  --bg: #172e28;
+  --bg: #11241f;
 }
 
 .page-home .bg-deep {
-  background: #1f3b35;
+  background: #183029;
 }
 
 /* Home page section headings in capitals (normal spacing, not the logo's wide tracking). */
@@ -3473,7 +3473,7 @@ body.page-home {
 
 /* Home page boxes: the Things to do blue-green, lighter than the background. */
 .page-home .bg-olive {
-  background: #1f3b35;
+  background: #183029;
 }
 
 /* Home page: no light green; highlights use the sand from the Things to do page. */
@@ -3494,10 +3494,10 @@ body.page-home {
 
 /* Home page header, phone menu and footer: the same blue-green, much darker. */
 .page-home .site-header.is-solid {
-  background: rgba(14, 32, 28, 0.94);
+  background: rgba(9, 23, 20, 0.94);
 }
 
 .page-home .mobile-menu,
 .page-home .site-footer {
-  background: #0e201c;
+  background: #091714;
 }
