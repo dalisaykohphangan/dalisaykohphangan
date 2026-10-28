@@ -31,7 +31,6 @@ EXPLORE = [
 FOOD = [
  ("nearby", "Close to Dalisay", "Our suggestions around Hin Kong, a short walk or ride away.", [
   ("Tomorrow Coconut Lane", "", "A new spot very close to Dalisay for coffee, breakfast and lunch!", [("", "Tomorrow Coconut Lane Koh Phangan")]),
-  ("Pura Vida Cafe", "", "Breakfast, brunch and coffee, with vegetarian and vegan options. There's a second cafe at Haad Yao beach.", [("Hin Kong", "Pura Vida Cafe Hin Kong Koh Phangan"), ("Haad Yao", "Pura Vida Cafe Haad Yao Koh Phangan")]),
   ("Indigo Specialty Coffee &amp; Bakery", "", "A lovely spot for coffee, breakfast, brunch and freshly baked treats.", [("", "Indigo Specialty Coffee Bakery Koh Phangan")]),
   ("Deli Devi", "", "A plant-based cafe and deli for breakfast, brunch, vegan cheeses, chocolate and cacao drinks.", [("", "Deli Devi Koh Phangan")]),
   ("Pure Vegan Heaven", "", "Plant-based food for breakfast or lunch.", [("", "Pure Vegan Heaven Hin Kong Koh Phangan")]),
@@ -66,6 +65,7 @@ FOOD = [
   ("Balance Specialty Coffee", "Maduea Wan", "Specialty coffee and brunch. A nice stop while exploring the island.", [("", "Balance Specialty Coffee Koh Phangan")]),
   ("Bubba's Coffee", "3 locations", "Specialty coffee, breakfast and brunch, with three locations around the island.", [("Thong Sala", "Bubbas Coffee Thong Sala Koh Phangan"), ("Baan Tai", "Bubbas Coffee Baan Tai Koh Phangan"), ("All locations", "Bubbas Coffee Koh Phangan")]),
   ("Cookies", "2 locations", "A relaxed spot for good coffee and a hearty breakfast.", [("Hin Kong", "Cookies Cafe Hin Kong Koh Phangan"), ("Sri Thanu", "Cookies Cafe Sri Thanu Koh Phangan")]),
+  ("Pura Vida Cafe", "2 locations", "Breakfast, brunch and coffee, with vegetarian and vegan options. There's a second cafe at Haad Yao beach.", [("Hin Kong", "Pura Vida Cafe Hin Kong Koh Phangan"), ("Haad Yao", "Pura Vida Cafe Haad Yao Koh Phangan")]),
   ("Kaif", "Chaloklum", "A beachfront cafe, restaurant and deli for coffee, breakfast, brunch or a relaxed meal overlooking the bay.", [("", "Kaif Chaloklum Koh Phangan")]),
   ("Bar Nena", "Thong Sala", "An Italian cafe and bakery for coffee, pastries, focaccia and pizza slices.", [("", "Bar Nena Koh Phangan")]),
   ("Nira's Home Bakery", "Thong Sala", "A favourite for breakfast, coffee, pastries and bread near the pier.", [("", "Niras Home Bakery Thong Sala Koh Phangan")]),
