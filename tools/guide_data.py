@@ -25,7 +25,6 @@ EXPLORE = [
  ], "Waterfalls are best after rainfall and may have little water during dry periods. For hikes, ask us about the appropriate trail access."),
  ("boats", "Boat trips &amp; diving", "Ask us and we'll arrange it for you.", [
   ("Ang Thong National Marine Park", "Day trip by boat", "An amazing day trip to explore dramatic limestone islands, beautiful beaches and stunning scenery. Ask us to arrange a trip for you!", [("", "Mu Ko Ang Thong National Marine Park")]),
-  ("Scuba diving at Sail Rock", "Between Phangan &amp; Koh Tao", "One of the Gulf of Thailand's standout dive sites! Ask us to help arrange a diving trip suited to your experience level.", [("", "Sail Rock Koh Phangan|ChIJc4KFKLMIVTAR3hDbGeC9VRs")]),
   ("Learn to dive in Chaloklum", "Chaloklum", "Chaloklum Diving is one of the island's best-reviewed dive schools, with courses for beginners and fun dives for certified divers.", [("", "Chaloklum Diving Koh Phangan|ChIJQ874jzoCVTARA39QxoF19bk")]),
  ], "Tell us what you enjoy, and we'll help you plan your adventure."),
 ]
