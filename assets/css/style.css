@@ -3475,3 +3475,11 @@ body.page-home {
 .page-home .bg-olive {
   background: #1f3b35;
 }
+
+/* Home page: no light green; highlights use the sand from the Things to do page. */
+.page-home .h2 em,
+.page-home .display em,
+.page-home .site-footer h2,
+.page-home .mobile-menu nav a[aria-current="page"] {
+  color: #d9c59a;
+}
