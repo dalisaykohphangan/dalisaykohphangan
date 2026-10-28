@@ -2975,3 +2975,25 @@ body.page-guide--food {
   opacity: 0.45;
 }
 
+/* Desktop: the photo stretches to fill the column beside the list of places
+   (cropped to fit); phones keep the normal 3:2 photo above the list. */
+@media (min-width: 861px) {
+  .page-guide .guide__head {
+    position: static;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page-guide .guide__photo {
+    flex: 1 1 auto;
+    min-height: 260px;
+    aspect-ratio: auto;
+  }
+
+  .page-guide .guide__photo img {
+    position: absolute;
+    inset: 0;
+  }
+}
+
