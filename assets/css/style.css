@@ -3470,3 +3470,8 @@ body.page-home {
   text-transform: uppercase;
   letter-spacing: -0.01em;
 }
+
+/* Home page: dark green panels instead of the light olive ones. */
+.page-home .bg-olive {
+  background: var(--forest);
+}
