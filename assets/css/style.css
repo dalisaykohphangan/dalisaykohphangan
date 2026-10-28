@@ -3495,11 +3495,18 @@ body.page-ed {
   background: var(--olive);
 }
 
-/* Home page section headings in capitals (normal spacing, not the logo's wide tracking). */
-.page-home .h2,
-.page-home .cta .display {
+/* Headings in capitals with tight line spacing (normal tracking, not the logo's wide spacing). */
+.display,
+.h2 {
   text-transform: uppercase;
   letter-spacing: -0.01em;
+  line-height: 0.9;
+}
+
+/* Thai script needs room for vowels above and below the line. */
+html[lang="th"] .display,
+html[lang="th"] .h2 {
+  line-height: 1.2;
 }
 
 .page-home .index-list .title {
