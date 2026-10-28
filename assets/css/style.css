@@ -2425,8 +2425,9 @@ a.cat:hover {
   flex-direction: column;
 }
 
+/* Book online sits first in the contact column, above the phone and links. */
 .contact-aside__book {
-  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .contact-aside__book .muted {
@@ -2448,6 +2449,13 @@ a.cat:hover {
 
 .contact-aside__policy li + li {
   margin-top: 0.35rem;
+}
+
+/* Line drawing of a bungalow at the top of the contact column (static, no draw-in). */
+.contact-aside__drawing {
+  width: min(440px, 100%);
+  margin-bottom: 2.5rem;
+  color: var(--cream);
 }
 
 .contact-aside__photo {
