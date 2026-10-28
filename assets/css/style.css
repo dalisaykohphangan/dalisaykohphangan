@@ -4,12 +4,13 @@
    ========================================================================== */
 
 :root {
-  --deep: #111a13;
-  --bg: #17221a;
-  --forest: #1d2b20;
-  --moss: #273627;
-  --olive: #696a44;
-  --sage: #b6b893;
+  /* Dark blue-green palette (no light green); --olive is the box colour, --sage the sand accent. */
+  --deep: #091714;
+  --bg: #11241f;
+  --forest: #183029;
+  --moss: #1f3b35;
+  --olive: #183029;
+  --sage: #d9c59a;
 
   --cream: #ece7da;
   --cream-dim: rgba(236, 231, 218, 0.7);
@@ -94,7 +95,7 @@ a {
   gap: 0.85rem;
   margin: 0 0 1.5rem;
   font-size: 0.7rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--cream-dim);
@@ -147,12 +148,12 @@ h6,
   font-family: var(--display);
 }
 
-/* quiet emphasis: same face, softer colour */
+/* emphasis keeps the heading colour (no highlighted words) */
 .display em,
 .h2 em,
 .h3 em {
   font-style: normal;
-  color: var(--sage);
+  color: inherit;
 }
 
 .lede {
@@ -165,7 +166,7 @@ h6,
 
 .small-caps {
   font-size: 0.7rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
 }
@@ -231,7 +232,7 @@ p {
   color: var(--btn-fg);
   font-family: var(--sans);
   font-size: 0.72rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   text-decoration: none;
@@ -280,7 +281,7 @@ p {
   align-items: center;
   gap: 0.6rem;
   font-size: 0.72rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   text-decoration: none;
@@ -318,7 +319,7 @@ p {
 }
 
 .site-header.is-solid {
-  background: rgba(17, 26, 19, 0.94);
+  background: rgba(9, 23, 20, 0.94);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom-color: var(--line);
@@ -354,6 +355,7 @@ p {
 .brand__place {
   margin-top: 0.4rem;
   font-size: 0.56rem;
+  font-weight: 500;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--cream-dim);
@@ -368,7 +370,7 @@ p {
   position: relative;
   padding: 0.4rem 0;
   font-size: 0.7rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   text-decoration: none;
@@ -403,6 +405,7 @@ p {
 .header-cta .btn {
   padding: 0.7rem 1.15rem;
   font-size: 0.66rem;
+  font-weight: 500;
 }
 
 /* Language switch (EN / ไทย) */
@@ -411,7 +414,7 @@ p {
   border-bottom: 1px solid transparent;
   color: var(--cream-dim);
   font-size: 0.72rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.12em;
   text-decoration: none;
   transition: color 0.3s var(--ease), border-color 0.3s var(--ease);
@@ -549,6 +552,7 @@ html[lang="th"] li {
 .mobile-menu nav a::before {
   content: "0" counter(m);
   font-size: 0.68rem;
+  font-weight: 500;
   letter-spacing: 0.15em;
   color: var(--cream-faint);
 }
@@ -632,12 +636,12 @@ html[lang="th"] li {
   inset: 0;
   background: linear-gradient(
       180deg,
-      rgba(17, 26, 19, 0.6) 0%,
-      rgba(17, 26, 19, 0.15) 30%,
-      rgba(17, 26, 19, 0.3) 60%,
-      rgba(17, 26, 19, 0.92) 100%
+      rgba(9, 23, 20, 0.6) 0%,
+      rgba(9, 23, 20, 0.15) 30%,
+      rgba(9, 23, 20, 0.3) 60%,
+      rgba(9, 23, 20, 0.92) 100%
     ),
-    linear-gradient(90deg, rgba(17, 26, 19, 0.5), rgba(17, 26, 19, 0) 65%);
+    linear-gradient(90deg, rgba(9, 23, 20, 0.5), rgba(9, 23, 20, 0) 65%);
 }
 
 .hero__content {
@@ -682,7 +686,7 @@ html[lang="th"] li {
 .hero__logo img {
   width: clamp(15rem, 34vw, 30rem);
   height: auto;
-  filter: drop-shadow(0 2px 18px rgba(17, 26, 19, 0.35));
+  filter: drop-shadow(0 2px 18px rgba(9, 23, 20, 0.35));
 }
 
 .hero__sub {
@@ -705,6 +709,7 @@ html[lang="th"] li {
   padding-bottom: 0.5rem;
   text-align: right;
   font-size: 0.68rem;
+  font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--cream-dim);
@@ -743,6 +748,7 @@ html[lang="th"] li {
     border-top: 1px solid var(--line-strong);
     text-align: left;
     font-size: 0.58rem;
+    font-weight: 500;
     letter-spacing: 0.14em;
   }
 
@@ -757,10 +763,10 @@ html[lang="th"] li {
   .hero::after {
     background: linear-gradient(
       180deg,
-      rgba(17, 26, 19, 0.55) 0%,
-      rgba(17, 26, 19, 0.2) 25%,
-      rgba(17, 26, 19, 0.75) 55%,
-      rgba(17, 26, 19, 0.95) 100%
+      rgba(9, 23, 20, 0.55) 0%,
+      rgba(9, 23, 20, 0.2) 25%,
+      rgba(9, 23, 20, 0.75) 55%,
+      rgba(9, 23, 20, 0.95) 100%
     );
   }
 }
@@ -798,9 +804,9 @@ html[lang="th"] li {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(17, 26, 19, 0.6) 0%,
-    rgba(17, 26, 19, 0.2) 40%,
-    rgba(17, 26, 19, 0.9) 100%
+    rgba(9, 23, 20, 0.6) 0%,
+    rgba(9, 23, 20, 0.2) 40%,
+    rgba(9, 23, 20, 0.9) 100%
   );
 }
 
@@ -919,6 +925,7 @@ html[lang="th"] li {
 
 .facts span {
   font-size: 0.68rem;
+  font-weight: 500;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--cream-dim);
@@ -1007,10 +1014,10 @@ html[lang="th"] li {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(17, 26, 19, 0.4) 0%,
-    rgba(17, 26, 19, 0) 28%,
-    rgba(17, 26, 19, 0.1) 55%,
-    rgba(17, 26, 19, 0.9) 100%
+    rgba(9, 23, 20, 0.4) 0%,
+    rgba(9, 23, 20, 0) 28%,
+    rgba(9, 23, 20, 0.1) 55%,
+    rgba(9, 23, 20, 0.9) 100%
   );
 }
 
@@ -1028,6 +1035,7 @@ html[lang="th"] li {
   display: flex;
   justify-content: space-between;
   font-size: 0.68rem;
+  font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
@@ -1057,6 +1065,7 @@ html[lang="th"] li {
   padding-top: 1rem;
   border-top: 1px solid var(--line-strong);
   font-size: 0.7rem;
+  font-weight: 500;
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
@@ -1104,7 +1113,7 @@ html[lang="th"] li {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(17, 26, 19, 0.66);
+  background: rgba(9, 23, 20, 0.66);
 }
 
 .band__inner {
@@ -1273,6 +1282,7 @@ html[lang="th"] li {
 
 .index-list .num {
   font-size: 0.7rem;
+  font-weight: 500;
   letter-spacing: 0.15em;
   color: var(--cream-faint);
 }
@@ -1286,6 +1296,7 @@ html[lang="th"] li {
 
 .index-list .tag {
   font-size: 0.66rem;
+  font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--cream-dim);
@@ -1351,7 +1362,7 @@ html[lang="th"] li {
 .footer-col h2 {
   margin: 0 0 1.25rem;
   font-size: 0.68rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--sage);
@@ -1382,6 +1393,7 @@ html[lang="th"] li {
   gap: 1rem;
   padding-top: 1.75rem;
   font-size: 0.68rem;
+  font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--cream-faint);
@@ -1420,7 +1432,7 @@ html[lang="th"] li {
   padding: 1.1rem 0;
   border-bottom: 1px solid transparent;
   font-size: 0.7rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   text-decoration: none;
@@ -1466,14 +1478,15 @@ html[lang="th"] li {
   display: block;
   margin-top: 0.75rem;
   font-size: 0.9rem;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.02em;
-  color: var(--cream-dim);
+  color: var(--cream);
 }
 
 .bungalow__price {
   text-align: right;
   font-size: 0.68rem;
+  font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--cream-dim);
@@ -1538,9 +1551,10 @@ html[lang="th"] li {
   right: 0;
   bottom: 0;
   padding: 0.55rem 0.85rem;
-  background: rgba(17, 26, 19, 0.85);
+  background: rgba(9, 23, 20, 0.85);
   color: var(--cream);
   font-size: 0.62rem;
+  font-weight: 500;
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
@@ -1605,6 +1619,7 @@ html[lang="th"] li {
 
 .specs span {
   font-size: 0.6rem;
+  font-weight: 500;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--cream-dim);
@@ -1694,7 +1709,7 @@ html[lang="th"] li {
 .compare tbody th {
   width: 22%;
   font-size: 0.68rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--sage);
@@ -1725,7 +1740,7 @@ html[lang="th"] li {
   color: var(--cream-dim);
   font-family: var(--sans);
   font-size: 0.68rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   cursor: pointer;
@@ -1787,9 +1802,10 @@ html[lang="th"] li {
   left: 0;
   bottom: 0;
   padding: 0.45rem 0.75rem;
-  background: rgba(17, 26, 19, 0.85);
+  background: rgba(9, 23, 20, 0.85);
   color: var(--cream);
   font-size: 0.6rem;
+  font-weight: 500;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   opacity: 0;
@@ -1827,6 +1843,7 @@ html[lang="th"] li {
   align-items: center;
   padding: 1rem var(--gutter);
   font-size: 0.68rem;
+  font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
 }
@@ -1931,6 +1948,7 @@ html[lang="th"] li {
   padding-top: 1.25rem;
   border-top: 1px solid var(--line-strong);
   font-size: 0.7rem;
+  font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
 }
@@ -1977,6 +1995,7 @@ html[lang="th"] li {
 
 .values .num {
   font-size: 0.68rem;
+  font-weight: 500;
   letter-spacing: 0.18em;
   color: var(--sage);
 }
@@ -2103,6 +2122,7 @@ a.cat:hover {
 .cat__meta {
   margin-top: 0.5rem;
   font-size: 0.6rem;
+  font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--cream-dim);
@@ -2180,6 +2200,7 @@ a.cat:hover {
   display: inline-block;
   margin-top: 0.45rem;
   font-size: 0.6rem;
+  font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--sage);
@@ -2228,6 +2249,7 @@ a.cat:hover {
 
 .contact-list .label {
   font-size: 0.66rem;
+  font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--cream-dim);
@@ -2287,6 +2309,7 @@ a.cat:hover {
 
 .field label {
   font-size: 0.64rem;
+  font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: rgba(236, 231, 218, 0.8);
@@ -2361,7 +2384,7 @@ a.cat:hover {
   margin: 1.5rem 0 0;
   padding: 0.85rem 1rem;
   border-left: 2px solid var(--clay);
-  background: rgba(17, 26, 19, 0.25);
+  background: rgba(9, 23, 20, 0.25);
   font-size: 0.9rem;
 }
 
@@ -2622,6 +2645,7 @@ html body .flatpickr-calendar .flatpickr-current-month input.cur-year {
 .availability__title {
   margin: 0 0 1rem;
   font-size: 0.66rem;
+  font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--cream-dim);
@@ -2686,6 +2710,7 @@ html body .flatpickr-calendar .flatpickr-current-month input.cur-year {
 .cal-dow {
   padding-bottom: 0.3rem;
   font-size: 0.62rem;
+  font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--cream-faint);
@@ -2725,6 +2750,7 @@ html body .flatpickr-calendar .flatpickr-current-month input.cur-year {
   gap: 0.45rem;
   margin: 1rem 0 0;
   font-size: 0.75rem;
+  font-weight: 500;
   color: var(--cream-dim);
 }
 
@@ -2837,6 +2863,7 @@ body.page-guide--food {
 
 .guide-index a {
   font-size: 0.72rem;
+  font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   text-decoration: none;
@@ -2866,6 +2893,7 @@ body.page-guide--food {
 
 .place-links a {
   font-size: 0.68rem;
+  font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   text-decoration: none;
@@ -2920,6 +2948,7 @@ body.page-guide--food {
 .emergency__list span {
   flex: 1 1 12rem;
   font-size: 0.72rem;
+  font-weight: 500;
   letter-spacing: 0.16em;
   text-transform: uppercase;
 }
@@ -3046,7 +3075,7 @@ body.page-ed {
   display: block;
   transform: rotate(var(--tilt, 0deg));
   filter: drop-shadow(3px 0 0 #fdfaf4) drop-shadow(-3px 0 0 #fdfaf4) drop-shadow(0 3px 0 #fdfaf4)
-    drop-shadow(0 -3px 0 #fdfaf4) drop-shadow(4px 8px 10px rgba(17, 26, 19, 0.3));
+    drop-shadow(0 -3px 0 #fdfaf4) drop-shadow(4px 8px 10px rgba(9, 23, 20, 0.3));
   transition: transform 0.4s var(--ease);
 }
 
@@ -3068,6 +3097,7 @@ body.page-ed {
   border-top: 2px solid var(--ed-ink);
   border-bottom: 1px solid var(--ed-rule);
   font-size: 0.7rem;
+  font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
 }
@@ -3092,7 +3122,7 @@ body.page-ed {
 /* Inset the title when it sits on a photo. */
 .ed-hero__stage .ed-title {
   padding-left: clamp(0.8rem, 2.5vw, 2rem);
-  text-shadow: 0 2px 24px rgba(17, 26, 19, 0.25);
+  text-shadow: 0 2px 24px rgba(9, 23, 20, 0.25);
 }
 
 /* Poster-style hero: the photo slides up under the last line of the title. */
@@ -3117,7 +3147,7 @@ body.page-ed {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(to bottom, rgba(17, 26, 19, 0.45), rgba(17, 26, 19, 0) 60%);
+  background: linear-gradient(to bottom, rgba(9, 23, 20, 0.45), rgba(9, 23, 20, 0) 60%);
   pointer-events: none;
 }
 
@@ -3191,6 +3221,7 @@ body.page-ed {
 .ed-index a span {
   margin-right: 0.35rem;
   font-size: 0.7rem;
+  font-weight: 500;
   color: var(--ed-accent);
 }
 
@@ -3302,6 +3333,7 @@ body.page-ed {
   display: block;
   margin-bottom: 0.35rem;
   font-size: 0.66rem;
+  font-weight: 500;
   letter-spacing: 0.18em;
   opacity: 0.85;
 }
@@ -3455,13 +3487,9 @@ body.page-ed {
   font-size: clamp(1.15rem, 1.8vw, 1.5rem);
 }
 
-/* Home page: dark blue-green background; boxes use the lighter Things to do blue-green. */
-body.page-home {
-  --bg: #11241f;
-}
-
+/* Home page: the Island guide section uses the box colour. */
 .page-home .bg-deep {
-  background: #183029;
+  background: var(--olive);
 }
 
 /* Home page section headings in capitals (normal spacing, not the logo's wide tracking). */
@@ -3471,33 +3499,16 @@ body.page-home {
   letter-spacing: -0.01em;
 }
 
-/* Home page boxes: the Things to do blue-green, lighter than the background. */
-.page-home .bg-olive {
-  background: #183029;
-}
-
-/* Home page: no light green; highlights use the sand from the Things to do page. */
-.page-home .site-footer h2,
-.page-home .mobile-menu nav a[aria-current="page"] {
-  color: #d9c59a;
-}
-
-/* Home page headings in one colour (no highlighted words). */
-.page-home .h2 em,
-.page-home .display em {
-  color: inherit;
-}
-
 .page-home .index-list .title {
   text-transform: uppercase;
 }
 
-/* Home page header, phone menu and footer: the same blue-green, much darker. */
-.page-home .site-header.is-solid {
-  background: rgba(9, 23, 20, 0.94);
+/* Bungalow names in capitals (home cards and the bungalows page). */
+.card__name,
+.bungalow__title {
+  text-transform: uppercase;
 }
 
-.page-home .mobile-menu,
-.page-home .site-footer {
-  background: #091714;
+.bungalow__title .bungalow__thai {
+  text-transform: none;
 }
