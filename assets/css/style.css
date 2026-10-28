@@ -2478,22 +2478,12 @@ a.cat:hover {
   margin-top: 0.35rem;
 }
 
-/* Whole bungalow drawing at the top of the contact column, above the phone number. */
-.contact-aside__drawing {
-  width: min(440px, 100%);
-  margin-bottom: 2.5rem;
-  color: var(--clay);
-}
-
-.contact-aside__drawing .line-drawing {
-  stroke-width: 1.2;
-}
-
+/* Photo at the top of the contact column; it grows so the column ends level with the enquiry box. */
 .contact-aside__photo {
   flex: 1 1 auto;
   min-height: 320px;
   position: relative;
-  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
   aspect-ratio: auto;
 }
 
