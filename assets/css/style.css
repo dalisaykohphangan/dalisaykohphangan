@@ -2451,12 +2451,7 @@ a.cat:hover {
   margin-top: 0.35rem;
 }
 
-/* Book online card: the bungalow drawing fills the top, then the text and button. */
-.book-card {
-  padding: clamp(1.5rem, 3vw, 2.25rem);
-  background: var(--olive);
-  border: 1px solid var(--line);
-}
+/* Book online: the bungalow drawing fills the top, then the text and button (no box). */
 
 .book-card__drawing {
   margin: 0 0 1.75rem;
