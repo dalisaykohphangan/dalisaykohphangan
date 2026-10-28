@@ -3487,3 +3487,7 @@ body.page-home {
 .page-home .display em {
   color: inherit;
 }
+
+.page-home .index-list .title {
+  text-transform: uppercase;
+}
