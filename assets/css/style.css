@@ -3071,7 +3071,9 @@ body.page-ed {
 .ed-title {
   --size: clamp(5rem, 21vw, 17rem);
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  padding-left: clamp(0.8rem, 2.5vw, 2rem);
+  text-shadow: 0 2px 24px rgba(17, 26, 19, 0.25);
   margin: clamp(1rem, 3vw, 2rem) 0 0;
   font-family: var(--ed-display);
   font-size: var(--size);
@@ -3084,9 +3086,9 @@ body.page-ed {
 /* Poster-style hero: the photo slides up under the last line of the title. */
 .ed-hero__photo {
   position: relative;
-  width: 88%;
-  margin: calc(clamp(5rem, 21vw, 17rem) * -0.42) 0 0 auto;
-  aspect-ratio: 16 / 8;
+  width: 100%;
+  margin: calc(clamp(5rem, 21vw, 17rem) * -1.2) 0 0;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
 }
 
@@ -3095,6 +3097,16 @@ body.page-ed {
   height: 100%;
   object-fit: cover;
   filter: saturate(0.85) contrast(0.95) brightness(1.03);
+}
+
+/* Darken the top of the photo so the title stays readable over it. */
+.ed-hero__photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(to bottom, rgba(17, 26, 19, 0.45), rgba(17, 26, 19, 0) 60%);
+  pointer-events: none;
 }
 
 /* Same paper grain as the page, so the photo looks printed. */
@@ -3107,7 +3119,7 @@ body.page-ed {
 }
 
 @media (max-width: 600px) {
-  .ed-hero__photo { width: 100%; aspect-ratio: 4 / 3; }
+  .ed-hero__photo { aspect-ratio: 4 / 5; }
 }
 
 .ed-hero__foot {
