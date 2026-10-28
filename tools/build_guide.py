@@ -146,9 +146,8 @@ def page(filename, body_class, eyebrow, title_html, intro, other, groups, cta, m
 def write(filename, body_class, main, meta_title, meta_desc, editorial=False):
     html = re.sub(r'<main id="main">.*?</main>', lambda m: main, TEMPLATE, flags=re.S)
     if editorial:
-        # Editorial guide pages add a heavy condensed display face and a handwriting face.
-        html = html.replace("&display=swap",
-                            "&family=Barlow+Condensed:wght@400;500;600&family=Caveat:wght@500;700&display=swap", 1)
+        # Editorial guide pages add a handwriting face (Barlow Condensed comes with the site header).
+        html = html.replace("&display=swap", "&family=Caveat:wght@500;700&display=swap", 1)
     html = re.sub(r"<title>.*?</title>", f"<title>{meta_title}</title>", html)
     for attr in ('name="description"', 'property="og:description"'):
         html = re.sub(r'(<meta %s content=")[^"]*' % attr, lambda m: m.group(1) + meta_desc, html)

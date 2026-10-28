@@ -148,6 +148,7 @@ def build_page(page, dic, missing):
                   '<a class="lang-switch" href="../%s" hreflang="en" lang="en" aria-label="Read in English">EN</a>' % page, html)
     # Thai pages keep their original heading font, so they don't need Barlow.
     html = html.replace("&family=Barlow:wght@200;300;400;500", "")
+    html = html.replace("&family=Barlow+Condensed:wght@400;500;600", "")
     # Add the Thai font to the Google Fonts link if the page doesn't load it yet.
     html = re.sub(r'(fonts\.googleapis\.com/css2\?(?:(?!Anuphan)[^"])*?)&display=swap',
                   r'\1&family=Anuphan:wght@200;300;400;500&display=swap', html)

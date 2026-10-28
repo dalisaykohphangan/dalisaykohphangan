@@ -3495,17 +3495,26 @@ body.page-ed {
   background: var(--olive);
 }
 
-/* Headings in capitals with tight line spacing (normal tracking, not the logo's wide spacing). */
+/* Headings in capitals in the guide's condensed face, with tight line spacing. */
 .display,
 .h2 {
+  font-family: "Barlow Condensed", var(--display);
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: -0.01em;
-  line-height: 0.9;
+  letter-spacing: 0.005em;
+  line-height: 0.85;
 }
 
-/* Thai script needs room for vowels above and below the line. */
+/* The condensed face reads smaller, so section headings get a size bump (English only). */
+html:not([lang="th"]) .h2 {
+  font-size: clamp(2.6rem, 5.4vw, 4.8rem);
+}
+
+/* Thai pages keep their own heading font, and Thai script needs room for vowels above and below the line. */
 html[lang="th"] .display,
 html[lang="th"] .h2 {
+  font-family: var(--display);
+  font-weight: 400;
   line-height: 1.2;
 }
 
