@@ -257,7 +257,7 @@ ed_page("todo.html", "page-guide--todo",
 
 ed_page("food.html", "page-guide--food",
         "Eat &amp;<br>drink",
-        "Where we eat on Koh Phangan, from a coffee a few minutes from Dalisay to night markets, Thai kitchens and sunset bars.",
+        "Where we eat on Koh Phangan, from a coffee a few minutes away to night markets, Thai kitchens and sunset bars.",
         "our favourite spots ↓",
         ("assets/img/guide/markets.jpg", "A street food vendor grilling skewers at a market stall"),
         ("todo.html", "Things to do"),
