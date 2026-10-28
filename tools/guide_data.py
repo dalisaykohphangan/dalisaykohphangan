@@ -55,6 +55,7 @@ FOOD = [
   ("Madam Saak Thong", "Chaloklum", "A family-run restaurant serving Thai and Isaan dishes.", [("", "Madam Saak Thong Koh Phangan")]),
   ("Chicken Rice Shop", "Thong Sala", "Simple, affordable Thai comfort food. Stop for a plate of chicken rice or pork with rice.", [("", "Chicken Rice Shop Thong Sala Koh Phangan")]),
   ("Pork Leg Restaurant", "Thong Sala", "A simple local spot for braised pork leg and Thai noodle soup.", [("", "Pork Leg Restaurant Koh Phangan")]),
+  ("Uncle Teum's Duck Noodle &amp; Crispy Pork", "", "A local favourite for duck noodles and crispy pork, with seats around a little pond and waterfall. Go early, as it closes when the food runs out.", [("", "Uncle Teum's Duck Noodle Crispy Pork Koh Phangan")]),
  ], None),
  ("markets", "Night markets &amp; street food", "Two weekly markets worth planning your evening around.", [
   ("Saturday Night Market", "Thong Sala", "Explore the walking street on Saturday evening for street food, sweet treats, shopping and a lively atmosphere.", [("", "Thong Sala Saturday Walking Street Koh Phangan")]),
