@@ -3454,3 +3454,19 @@ body.page-ed {
 .page-info .ed-calls__nums a {
   font-size: clamp(1.15rem, 1.8vw, 1.5rem);
 }
+
+/* Home page: same deep blue-green as the Things to do page. */
+body.page-home {
+  --bg: #1f3b35;
+}
+
+.page-home .bg-deep {
+  background: #18302b;
+}
+
+/* Home page section headings in capitals (normal spacing, not the logo's wide tracking). */
+.page-home .h2,
+.page-home .cta .display {
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
