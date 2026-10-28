@@ -3009,10 +3009,10 @@ body.page-guide--food {
   --ed-rule: rgba(253, 250, 244, 0.35);
 }
 
-/* Things to do page: deep blue-green; cream text with light blue accents. */
+/* Things to do page: deep blue-green; cream text with warm sand accents. */
 body.page-ed.page-guide--todo {
   --ed-ink: var(--cream);
-  --ed-accent: #a9d2e3;
+  --ed-accent: #d9c59a;
   --ed-rule: rgba(236, 231, 218, 0.3);
   background-color: #1f3b35;
 }
