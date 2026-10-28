@@ -112,6 +112,7 @@ WELL = [
   ("Diamond Muay Thai", "Nai Wok", "A family-run Muay Thai camp offering training for beginners and experienced practitioners.", [("", "Diamond Muay Thai Koh Phangan")]),
   ("Chinnarach Muay Thai", "Thong Sala", "An established open-air Muay Thai gym offering group classes and private training, from beginner to fighter level.", [("", "Chinnarach Muay Thai Koh Phangan")]),
   ("Sor Saktai Muay Thai", "Nai Wok", "A traditional fight camp focused on serious training and competition preparation. Contact the gym to discuss your experience and goals.", [("", "Sor Saktai Muay Thai Koh Phangan")]),
+  ("M19 Muay Thai", "Thong Sala", "A top-rated Muay Thai gym with classes for every level, from first-timers to fighters.", [("", "M19 Muay Thai Koh Phangan|ChIJfX7a97f9VDAR00HRVPLEuf4")]),
   ("Ninja Camp", "Baan Tai", "A Muay Thai gym and dojo. Contact the camp for current classes and training options.", [("", "Ninja Camp Dojo Muay Thai Koh Phangan")]),
  ], None),
  ("padel", "Padel &amp; climbing", "Social games and bouldering sessions.", [
