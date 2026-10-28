@@ -3281,6 +3281,11 @@ body.page-ed {
   .ed-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
+@media (max-width: 900px) {
+  .ed-hero__foot { grid-template-columns: 1fr auto; }
+  .ed-hero__foot .ed-lede { grid-column: 1 / -1; }
+}
+
 @media (max-width: 600px) {
   .ed-list { grid-template-columns: 1fr; }
   .ed-hero__foot { grid-template-columns: 1fr; }
