@@ -2456,54 +2456,15 @@ a.cat:hover {
   margin-top: 0.35rem;
 }
 
-/* Book online: half the bungalow drawing on the left, text and button on the right. */
-.book-card {
-  display: grid;
-  grid-template-columns: minmax(0, 0.5fr) minmax(0, 1fr);
-  column-gap: clamp(1rem, 3vw, 2rem);
-  align-items: start;
-}
-
-/* Hidden with the rest of the form once an enquiry is sent. */
-.book-card[hidden] {
-  display: none;
-}
-
-.book-card > * {
-  grid-column: 2;
-}
-
-.book-card .book-card__drawing {
-  grid-column: 1;
-  grid-row: 1 / span 3;
-  align-self: center;
+/* Whole bungalow drawing at the top of the contact column, above the phone number. */
+.contact-aside__drawing {
+  width: min(440px, 100%);
+  margin-bottom: 2.5rem;
   color: var(--clay);
 }
 
-.book-card__drawing .line-drawing {
-  stroke-width: 1.3;
-}
-
-.book-card .btn {
-  white-space: nowrap;
-}
-
-/* Phones: drawing above the text, so neither gets squeezed. */
-@media (max-width: 600px) {
-  .book-card {
-    grid-template-columns: 1fr;
-  }
-
-  .book-card > * {
-    grid-column: 1;
-  }
-
-  .book-card .book-card__drawing {
-    grid-column: 1;
-    grid-row: auto;
-    width: min(150px, 45%);
-    margin-bottom: 1.5rem;
-  }
+.contact-aside__drawing .line-drawing {
+  stroke-width: 1.2;
 }
 
 .contact-aside__photo {
