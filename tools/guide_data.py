@@ -91,7 +91,7 @@ FOOD = [
   ("Top Rock Bar", "Nai Wok", "A hillside spot for sunset drinks and sea views. Expect a steep climb up the stairs!", [("", "Top Rock Bar Koh Phangan")]),
   ("Apichada Viewpoint Cafe &amp; Bar", "Baan Tai", "Enjoy a drink or a meal with sweeping views towards Koh Samui.", [("", "Apichada Viewpoint Koh Phangan")]),
   ("Apple Bar", "Haad Yao", "A hillside bar for drinks and music. Check what's on before heading over.", [("", "AppleBar HaadYao Koh Phangan")]),
-  ("420 Club Phangan", "Mae Haad", "A viewpoint bar overlooking the coast and Koh Ma.", [("", "420 Club Phangan")]),
+  ("420 Club Phangan", "Mae Haad", "A viewpoint bar with stunning 360° views of the bay and Koh Ma.", [("", "420 Club Phangan")]),
   ("Lazy Rock", "Haad Diao", "Tucked away behind Secret Beach.", [("", "Lazy Rock Koh Phangan")]),
   ("Mae Haad Tree House", "Mae Haad", "A bar and restaurant with coastal views. Combine it with a visit to Mae Haad Beach.", [("", "Mae Haad Tree House Bar Koh Phangan")]),
  ], None),
