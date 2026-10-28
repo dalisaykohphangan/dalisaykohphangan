@@ -3477,9 +3477,13 @@ body.page-home {
 }
 
 /* Home page: no light green; highlights use the sand from the Things to do page. */
-.page-home .h2 em,
-.page-home .display em,
 .page-home .site-footer h2,
 .page-home .mobile-menu nav a[aria-current="page"] {
   color: #d9c59a;
+}
+
+/* Home page headings in one colour (no highlighted words). */
+.page-home .h2 em,
+.page-home .display em {
+  color: inherit;
 }
