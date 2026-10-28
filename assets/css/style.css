@@ -2451,11 +2451,24 @@ a.cat:hover {
   margin-top: 0.35rem;
 }
 
-/* Line drawing of a bungalow at the top of the contact column (static, no draw-in). */
-.contact-aside__drawing {
-  width: min(440px, 100%);
-  margin-bottom: 2.5rem;
-  color: var(--cream);
+/* Book online card: the bungalow drawing fills the top, then the text and button. */
+.book-card {
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  background: var(--olive);
+  border: 1px solid var(--line);
+}
+
+.book-card__drawing {
+  margin: 0 0 1.75rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--clay);
+}
+
+.book-card__drawing .line-drawing {
+  max-width: 520px;
+  margin: 0 auto;
+  stroke-width: 1.2;
 }
 
 .contact-aside__photo {
