@@ -113,7 +113,7 @@ a {
 
 .display {
   margin: 0;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 0.95;
   letter-spacing: -0.04em;
 }
@@ -121,7 +121,7 @@ a {
 .h2 {
   margin: 0 0 1.5rem;
   font-size: clamp(2.2rem, 4.6vw, 4rem);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.05;
   letter-spacing: -0.035em;
 }
@@ -129,7 +129,7 @@ a {
 .h3 {
   margin: 0 0 0.75rem;
   font-size: clamp(1.5rem, 2.4vw, 2rem);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.1;
   letter-spacing: -0.025em;
 }
@@ -158,7 +158,7 @@ h6,
 .lede {
   margin: 0 0 1.5rem;
   font-size: clamp(1.15rem, 1.7vw, 1.4rem);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.45;
   letter-spacing: -0.01em;
 }
@@ -540,7 +540,7 @@ html[lang="th"] li {
   gap: 1rem;
   padding: 0.9rem 0;
   font-size: clamp(1.8rem, 7vw, 2.6rem);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: -0.03em;
   line-height: 1.1;
   text-decoration: none;
@@ -657,7 +657,7 @@ html[lang="th"] li {
 
 .hero__title {
   font-size: clamp(4.2rem, 14vw, 12.5rem);
-  font-weight: 200;
+  font-weight: 300;
   letter-spacing: -0.055em;
   margin-left: -0.06em;
 }
@@ -673,7 +673,7 @@ html[lang="th"] li {
   margin: 0 0 clamp(0.6rem, 1.2vw, 1rem) 0.15em;
   font-family: "Anuphan", var(--sans);
   font-size: clamp(1rem, 1.8vw, 1.45rem);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.2;
   letter-spacing: 0.14em;
   color: #fff;
@@ -689,7 +689,7 @@ html[lang="th"] li {
   max-width: 32rem;
   margin: 1.5rem 0 2rem;
   font-size: clamp(1.1rem, 1.6vw, 1.35rem);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.45;
 }
 
@@ -714,7 +714,7 @@ html[lang="th"] li {
   display: block;
   margin-bottom: 0.3rem;
   font-size: 1.7rem;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: -0.02em;
   text-transform: none;
   line-height: 1;
@@ -811,7 +811,7 @@ html[lang="th"] li {
 
 .page-hero__title {
   font-size: clamp(3.2rem, 9vw, 8rem);
-  font-weight: 200;
+  font-weight: 300;
   letter-spacing: -0.05em;
 }
 
@@ -912,7 +912,7 @@ html[lang="th"] li {
   display: block;
   margin-bottom: 0.4rem;
   font-size: clamp(1.4rem, 2.2vw, 1.9rem);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: -0.03em;
   line-height: 1.1;
 }
@@ -1039,7 +1039,7 @@ html[lang="th"] li {
 .card__name {
   margin: 0 0 0.35rem;
   font-size: clamp(2rem, 3vw, 2.6rem);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: -0.035em;
   line-height: 1;
 }
@@ -1118,7 +1118,7 @@ html[lang="th"] li {
   max-width: 20ch;
   margin: 0 auto 1.25rem;
   font-size: clamp(2rem, 4.4vw, 3.8rem);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.1;
   letter-spacing: -0.035em;
 }
@@ -1279,7 +1279,7 @@ html[lang="th"] li {
 
 .index-list .title {
   font-size: clamp(1.5rem, 3vw, 2.4rem);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: -0.03em;
   line-height: 1.05;
 }
@@ -1306,7 +1306,7 @@ html[lang="th"] li {
 .cta .display {
   margin-bottom: 1.5rem;
   font-size: clamp(2.8rem, 7.5vw, 6.5rem);
-  font-weight: 200;
+  font-weight: 300;
 }
 
 .cta p {
@@ -1451,7 +1451,7 @@ html[lang="th"] li {
 
 .bungalow__num {
   font-size: clamp(3.5rem, 7vw, 6rem);
-  font-weight: 200;
+  font-weight: 300;
   line-height: 0.8;
   letter-spacing: -0.05em;
   color: var(--sage);
@@ -1459,7 +1459,7 @@ html[lang="th"] li {
 
 .bungalow__title {
   font-size: clamp(2.8rem, 6.4vw, 5.6rem);
-  font-weight: 200;
+  font-weight: 300;
 }
 
 .bungalow__thai {
@@ -1483,7 +1483,7 @@ html[lang="th"] li {
   display: block;
   margin: 0.35rem 0;
   font-size: clamp(1.8rem, 3vw, 2.6rem);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: -0.03em;
   text-transform: none;
   line-height: 1;
@@ -1598,7 +1598,7 @@ html[lang="th"] li {
 
 .specs strong {
   font-size: 1.2rem;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: -0.02em;
   line-height: 1;
 }
@@ -1687,7 +1687,7 @@ html[lang="th"] li {
 
 .compare thead th {
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: -0.03em;
 }
 
@@ -1907,7 +1907,7 @@ html[lang="th"] li {
 .review__mark {
   height: 2rem;
   font-size: 4rem;
-  font-weight: 200;
+  font-weight: 300;
   line-height: 0.8;
   color: var(--sage);
 }
@@ -1919,7 +1919,7 @@ html[lang="th"] li {
 .review blockquote {
   margin: 0;
   font-size: clamp(1.15rem, 1.6vw, 1.35rem);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.45;
   letter-spacing: -0.01em;
 }
@@ -1984,7 +1984,7 @@ html[lang="th"] li {
 .values h3 {
   margin: 2.5rem 0 0.75rem;
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: -0.025em;
   line-height: 1.1;
 }
@@ -2095,7 +2095,7 @@ a.cat:hover {
 
 .cat__name {
   font-size: 1.3rem;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: -0.02em;
   line-height: 1.1;
 }
@@ -2142,7 +2142,7 @@ a.cat:hover {
   display: block;
   margin-bottom: 1rem;
   font-size: 2.6rem;
-  font-weight: 200;
+  font-weight: 300;
   line-height: 0.9;
   letter-spacing: -0.04em;
   color: var(--sage);
@@ -2235,7 +2235,7 @@ a.cat:hover {
 
 .contact-list a {
   font-size: clamp(1.15rem, 2vw, 1.55rem);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: -0.02em;
   line-height: 1.2;
   text-decoration: none;
