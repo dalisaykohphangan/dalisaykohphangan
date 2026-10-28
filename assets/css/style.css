@@ -2425,9 +2425,14 @@ a.cat:hover {
   flex-direction: column;
 }
 
-/* Book online sits first in the contact column, above the phone and links. */
+/* Book online sits at the top of the enquiry box; the form follows below a divider. */
 .contact-aside__book {
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.25rem;
+}
+
+.form__or {
+  padding-top: 2.25rem;
+  border-top: 1px solid var(--line);
 }
 
 .contact-aside__book .muted {
@@ -2457,6 +2462,11 @@ a.cat:hover {
   grid-template-columns: minmax(0, 0.5fr) minmax(0, 1fr);
   column-gap: clamp(1rem, 3vw, 2rem);
   align-items: start;
+}
+
+/* Hidden with the rest of the form once an enquiry is sent. */
+.book-card[hidden] {
+  display: none;
 }
 
 .book-card > * {
