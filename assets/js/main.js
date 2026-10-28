@@ -447,7 +447,7 @@
         })
         .then(function () {
           submitBtn.disabled = false;
-          submitBtn.firstChild.textContent = t("Send enquiry ", "ส่งคำถาม ");
+          submitBtn.firstChild.textContent = t("Send ", "ส่ง ");
         });
     });
   }
