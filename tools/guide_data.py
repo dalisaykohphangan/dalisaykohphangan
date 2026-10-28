@@ -121,7 +121,7 @@ WELL = [
   ("UPSIDE Bouldering Gym", "Maduea Wan", "Indoor bouldering on low climbing walls above padded mats. A fun option for a workout and practising climbing technique.", [("", "Upside Bouldering Gym Koh Phangan")]),
   ("GRIP Climb &amp; Cafe", "Thong Sala", "A climbing gym and cafe near the pier. Combine a climbing session with a coffee afterwards!", [("", "GRIP Climb Cafe Koh Phangan")]),
   ("First Bow &amp; Arrow Club", "Near Chaloklum", "Try your hand at archery in the hills near Chaloklum. A fun, different way to spend an afternoon.", [("", "First Bow Arrow Club Koh Phangan|ChIJiwgIMDwCVTARbzswIY6iSKc")]),
-  ("Mini Golf", "Maduea Wan", "A relaxed round of mini golf in a leafy garden. Easy fun for a lazy afternoon.", [("", "Mini Golf Koh Phangan|ChIJCZ1Gnwr-VDARKSnRoU_DA9s")]),
+  ("Mini Golf", "Maduea Wan", "A relaxed round of mini golf. Easy fun for a lazy afternoon.", [("", "Mini Golf Koh Phangan|ChIJCZ1Gnwr-VDARKSnRoU_DA9s")]),
  ], "Contact each venue directly for current schedules, day passes, equipment rental and bookings."),
  ("yoga", "Yoga", "Classes, retreats and quiet practice around the island.", [
   ("Orion Healing Centre", "Sri Thanu", "A beachfront wellness centre offering yoga classes, meditation and retreats.", [("", "Orion Healing Centre Koh Phangan")]),
