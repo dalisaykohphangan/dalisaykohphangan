@@ -79,7 +79,7 @@ FOOD = [
   ("Ristorante Rimini", "Chaloklum", "Italian food with a focus on fish, seafood and pasta. A lovely dinner stop.", [("", "Ristorante Rimini Koh Phangan")]),
   ("Caffe Della Moca", "Chaloklum", "Italian food, pizza and pasta by the water. A lovely option for dinner.", [("", "Caffe Della Moca Koh Phangan")]),
   ("Wasabi", "2 locations", "Sushi, sashimi and Japanese food, in town at Thong Sala or on the west coast at Haad Son.", [("Thong Sala", "Wasabi Thong Sala Koh Phangan"), ("Haad Son", "Wasabi Haad Son Koh Phangan")]),
-  ("Salt", "", "Fresh seafood and creative fusion sushi in a stylish setting. A lovely choice for date night.", [("", "Salt Restaurant Koh Phangan")]),
+  ("Salt", "Thong Sala", "Fresh seafood and creative fusion sushi in a stylish setting. A lovely choice for date night.", [("", "Salt Restaurant Thong Sala Koh Phangan")]),
   ("The Lakehouse", "Sri Thanu", "A relaxed lakeside restaurant and pub for a casual meal and drinks with friends.", [("", "The Lakehouse Restaurant Pub Koh Phangan")]),
   ("Mythai Burgers", "Thong Sala &amp; Chaloklum", "Burgers and fries, in town at Thong Sala or after exploring the northern beaches at Chaloklum.", [("Thong Sala", "Mythai Burgers Thong Sala Koh Phangan"), ("Chaloklum", "Mythai Burgers Chaloklum Koh Phangan")]),
   ("SOHO", "Thong Sala", "Burgers, pub food, craft beer and sports.", [("", "SOHO Bar Phangan")]),
