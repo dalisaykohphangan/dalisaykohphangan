@@ -3455,13 +3455,13 @@ body.page-ed {
   font-size: clamp(1.15rem, 1.8vw, 1.5rem);
 }
 
-/* Home page: same deep blue-green as the Things to do page. */
+/* Home page: dark blue-green background; boxes use the lighter Things to do blue-green. */
 body.page-home {
-  --bg: #1f3b35;
+  --bg: #172e28;
 }
 
 .page-home .bg-deep {
-  background: #172e28;
+  background: #1f3b35;
 }
 
 /* Home page section headings in capitals (normal spacing, not the logo's wide tracking). */
@@ -3471,7 +3471,7 @@ body.page-home {
   letter-spacing: -0.01em;
 }
 
-/* Home page: panels a few shades darker than the blue-green background. */
+/* Home page boxes: the Things to do blue-green, lighter than the background. */
 .page-home .bg-olive {
-  background: #172e28;
+  background: #1f3b35;
 }
