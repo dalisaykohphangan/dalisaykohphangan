@@ -15,7 +15,7 @@
   --cream: #ece7da;
   --cream-dim: rgba(236, 231, 218, 0.7);
   --cream-faint: rgba(236, 231, 218, 0.45);
-  --clay: #a65d3f;
+  --clay: #e6cf8f; /* warm golden cream (replaced terracotta) */
 
   --line: rgba(236, 231, 218, 0.14);
   --line-strong: rgba(236, 231, 218, 0.28);
@@ -269,11 +269,11 @@ p {
 
 .btn--clay {
   --btn-bg: var(--clay);
-  --btn-fg: var(--cream);
+  --btn-fg: var(--deep);
 }
 
 .btn--clay:hover {
-  --btn-bg: #8e4e34;
+  --btn-bg: #d8bd72;
 }
 
 .text-link {
@@ -2737,14 +2737,14 @@ html body .flatpickr-calendar .flatpickr-current-month input.cur-year {
 }
 
 .cal-day.is-booked {
-  color: var(--cream);
+  color: var(--deep);
   background: var(--clay);
   text-decoration: line-through;
 }
 
 .cal-day.is-past.is-booked {
   color: var(--cream-faint);
-  background: rgba(166, 93, 63, 0.35);
+  background: rgba(230, 207, 143, 0.3);
 }
 
 .availability__legend {
