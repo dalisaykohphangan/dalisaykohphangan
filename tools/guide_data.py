@@ -74,7 +74,7 @@ FOOD = [
   ("Satimi's Ice Cream", "Thong Sala", "Stop for homemade ice cream, gelato and fruity sorbets while exploring town.", [("", "Satimi Ice Cream Koh Phangan")]),
  ], None),
  ("world", "Western food", "Italian, sushi, burgers and pub food for when you fancy something different.", [
-  ("DAO", "", "A high-end restaurant for special occasions and celebrations. Reservations are essential.", [("", "DAO Restaurant Koh Phangan")]),
+  ("DAO", "Thong Sala", "Progressive Levantine-Thai cuisine by Chef Nir Mesika. Fine dining, perfect for date night.", [("", "DAO Restaurant Thong Sala Koh Phangan")]),
   ("NENA Locanda Italiana", "Wok Tum", "Italian dining with pasta, Mediterranean flavours and wine.", [("", "NENA Locanda Italiana Koh Phangan")]),
   ("Ristorante Rimini", "Chaloklum", "Italian food with a focus on fish, seafood and pasta. A lovely dinner stop.", [("", "Ristorante Rimini Koh Phangan")]),
   ("Caffe Della Moca", "Chaloklum", "Italian food, pizza and pasta by the water. A lovely option for dinner.", [("", "Caffe Della Moca Koh Phangan")]),
