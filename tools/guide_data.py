@@ -19,12 +19,14 @@ EXPLORE = [
   ("Phaeng Waterfall &amp; Dom Sila Viewpoint", "Island centre", "Enjoy a short jungle hike, with a climb up to the viewpoint for views across the island.", [("Phaeng Waterfall", "Phaeng Waterfall Koh Phangan"), ("Dom Sila Viewpoint", "Dom Sila Viewpoint Koh Phangan")]),
   ("Paradise Waterfall", "Near Chaloklum", "A lovely jungle stop near Chaloklum. Combine it with a visit to the village and the northern beaches.", [("", "Paradise Waterfall Koh Phangan")]),
   ("Wang Sai Waterfall", "Mae Haad", "A waterfall stop near Mae Haad, easy to combine with a visit to Koh Ma.", [("", "Wang Sai Waterfall Koh Phangan")]),
+  ("Koh Ma Viewpoint", "Mae Haad", "A short climb to a viewpoint over the sandbar and Koh Ma. Best around sunset.", [("", "Ko Ma viewpoint Koh Phangan|ChIJqXcmDYIBVTARchxTQ3pDdyc")]),
   ("Thong Nai Pan", "East coast", "A beautiful day trip with a scenic drive through the island, two lovely bays and places to stop for lunch. Combine it with Bottle Beach Viewpoint for a full day out.", [("Thong Nai Pan Noi", "Thong Nai Pan Noi Beach Koh Phangan"), ("Thong Nai Pan Yai", "Thong Nai Pan Yai")]),
   ("Than Sadet Beach &amp; Waterfall", "East coast", "Don't miss this beautiful side of the island! Explore the waterfall and then head to the beach to relax.", [("Beach", "Than Sadet Beach Koh Phangan"), ("Waterfall", "Than Sadet Waterfall Koh Phangan")]),
  ], "Waterfalls are best after rainfall and may have little water during dry periods. For hikes, ask us about the appropriate trail access."),
  ("boats", "Boat trips &amp; diving", "Ask us and we'll arrange it for you.", [
   ("Ang Thong National Marine Park", "Day trip by boat", "An amazing day trip to explore dramatic limestone islands, beautiful beaches and stunning scenery. Ask us to arrange a trip for you!", [("", "Mu Ko Ang Thong National Marine Park")]),
   ("Scuba diving at Sail Rock", "Between Phangan &amp; Koh Tao", "One of the Gulf of Thailand's standout dive sites! Ask us to help arrange a diving trip suited to your experience level.", [("", "Sail Rock Koh Phangan|ChIJc4KFKLMIVTAR3hDbGeC9VRs")]),
+  ("Learn to dive in Chaloklum", "Chaloklum", "Chaloklum Diving is one of the island's best-reviewed dive schools, with courses for beginners and fun dives for certified divers.", [("", "Chaloklum Diving Koh Phangan|ChIJQ874jzoCVTARA39QxoF19bk")]),
  ], "Tell us what you enjoy, and we'll help you plan your adventure."),
 ]
 
@@ -57,9 +59,10 @@ FOOD = [
   ("Pork Leg Restaurant", "Thong Sala", "A simple local spot for braised pork leg and Thai noodle soup.", [("", "Pork Leg Restaurant Koh Phangan")]),
   ("Uncle Teum's Duck Noodle &amp; Crispy Pork", "Maduea Wan", "A local favourite for duck noodles and crispy pork, with seats around a little pond and waterfall. Go early, as it closes when the food runs out.", [("", "Uncle Teum's Duck Noodle Crispy Pork Koh Phangan")]),
  ], None),
- ("markets", "Night markets &amp; street food", "Two weekly markets worth planning your evening around.", [
+ ("markets", "Night markets &amp; street food", "Two weekly night markets worth planning your evening around, plus a daily food market in Thong Sala.", [
   ("Saturday Night Market", "Thong Sala", "Explore the walking street on Saturday evening for street food, sweet treats, shopping and a lively atmosphere.", [("", "Thong Sala Saturday Walking Street Koh Phangan")]),
   ("Sunday Night Market", "Chaloklum", "Visit the fishing village on Sunday evening for food stalls, desserts and a lovely atmosphere by the waterfront.", [("", "Sunday Market Chaloklum Koh Phangan")]),
+  ("Thong Sala Food Market", "Thong Sala", "The everyday market near the pier, with street food stalls, fresh fruit and local snacks. Handy any day of the week.", [("", "Thong Sala Local Market Koh Phangan|ChIJVZeWPmH_VDARCKrfCERuNWw")]),
  ], None),
  ("coffee", "Coffee, breakfast &amp; bakeries", "Specialty coffee, brunch, fresh bread and pastries.", [
   ("Young Son Cafe", "Wok Tum", "Specialty coffee and a peaceful spot to start your morning.", [("", "Young Son Cafe Koh Phangan")]),
