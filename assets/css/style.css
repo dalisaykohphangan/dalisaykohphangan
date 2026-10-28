@@ -3017,6 +3017,14 @@ body.page-ed.page-guide--todo {
   background-color: #1f3b35;
 }
 
+/* Emergency page: kept simple, deep forest green with sand accents. */
+body.page-ed.page-info {
+  --ed-ink: var(--cream);
+  --ed-accent: #d9c59a;
+  --ed-rule: rgba(236, 231, 218, 0.3);
+  background-color: var(--forest);
+}
+
 /* Food page: vivid red-orange (deep enough for cream text). */
 body.page-ed.page-guide--food {
   --ed-accent: var(--deep);
@@ -3072,8 +3080,6 @@ body.page-ed {
   --size: clamp(5rem, 21vw, 17rem);
   position: relative;
   z-index: 2;
-  padding-left: clamp(0.8rem, 2.5vw, 2rem);
-  text-shadow: 0 2px 24px rgba(17, 26, 19, 0.25);
   margin: clamp(1rem, 3vw, 2rem) 0 0;
   font-family: var(--ed-display);
   font-size: var(--size);
@@ -3081,6 +3087,12 @@ body.page-ed {
   line-height: 0.82;
   letter-spacing: 0.005em !important;
   text-transform: uppercase;
+}
+
+/* Inset the title when it sits on a photo. */
+.ed-hero__stage .ed-title {
+  padding-left: clamp(0.8rem, 2.5vw, 2rem);
+  text-shadow: 0 2px 24px rgba(17, 26, 19, 0.25);
 }
 
 /* Poster-style hero: the photo slides up under the last line of the title. */
@@ -3359,4 +3371,46 @@ body.page-ed {
   text-transform: uppercase;
 }
 
+/* Emergency numbers: name on the left, big tappable numbers on the right. */
+.ed-calls {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ed-calls li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.4rem 2rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--ed-rule);
+}
+
+.ed-calls__name {
+  font-family: var(--ed-display);
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.ed-calls__nums {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1.6rem;
+}
+
+.ed-calls__nums a {
+  font-family: var(--ed-display);
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  font-weight: 500;
+  color: var(--ed-accent);
+  text-decoration: none;
+  border-bottom: 2px solid currentColor;
+}
+
+.page-info .ed-sec:last-of-type {
+  padding-bottom: clamp(4rem, 8vw, 7rem);
+}
 

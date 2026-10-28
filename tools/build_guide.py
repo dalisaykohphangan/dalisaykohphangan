@@ -267,33 +267,51 @@ ed_page("food.html", "page-guide--food",
         "Eat & Drink — Dalisay Koh Phangan",
         "Dalisay's favourite places to eat and drink on Koh Phangan: cafes near Hin Kong, Thai food, night markets, bakeries and sunset bars.")
 
+CALLS = [
+    ("At Dalisay", "For property emergencies, voice call us any time on WhatsApp or by phone.",
+     [("Dalisay", [("+66 61 697 0716", "tel:+66616970716"), ("WhatsApp", "https://wa.me/66616970716")])]),
+    ("Health &amp; safety", "Please call the appropriate emergency service directly for urgent health, safety or medical assistance.",
+     [("Government Hospital", [("1669", "tel:1669"), ("+66 77 377 034", "tel:+6677377034")]),
+      ("International Hospital", [("+66 77 429 559", "tel:+6677429559")]),
+      ("Police", [("191", "tel:191"), ("+66 77 377 114", "tel:+6677377114")]),
+      ("Tourist Police", [("1155", "tel:1155"), ("+66 2 308 0333", "tel:+6623080333")])]),
+]
+
+
+def ed_calls(num, title, intro, rows):
+    def link(label, href):
+        ext = ' target="_blank" rel="noopener"' if href.startswith("http") else ""
+        return f'<a href="{href}"{ext}>{label}</a>'
+    items = "".join(f'<li><span class="ed-calls__name">{name}</span><span class="ed-calls__nums">'
+                    + "".join(link(*n) for n in nums) + "</span></li>" for name, nums in rows)
+    return f"""<section class="ed-sec">
+  <div class="wrap">
+    <div class="ed-sec__head">
+      <span class="ed-num" aria-hidden="true">{num:02d}</span>
+      <h2 class="ed-sec__title">{title}</h2>
+      <p class="ed-sec__intro">{intro}</p>
+    </div>
+    <ul class="ed-calls">{items}</ul>
+  </div>
+</section>
+
+"""
+
+
 write("info.html", "page-info", """<main id="main">
 
-<section class="page-hero">
+<section class="ed-hero">
   <div class="wrap">
-    <p class="eyebrow">Emergency &amp; things to know</p>
-    <div class="page-hero__row">
-      <h1 class="display page-hero__title">Good <em>to know</em>.</h1>
-      <p>Emergency numbers, and soon our trusted contacts for ferries, taxis and getting around the island.</p>
+    <div class="ed-meta"><span>Dalisay island guide</span><span>Koh Phangan</span><span>Good to know</span></div>
+    <h1 class="ed-title">Good to<br>know</h1>
+    <div class="ed-hero__foot">
+      <p class="ed-lede">Emergency numbers, and soon our trusted contacts for ferries, taxis and getting around the island.</p>
     </div>
   </div>
 </section>
 
-<section class="section" style="padding-top:0">
-  <div class="wrap">
-    <div class="emergency emergency--page">
-      <div class="emergency__head">
-        <h2 class="h3">At Dalisay</h2>
-        <p>For property emergencies, voice call us any time on WhatsApp or by phone.</p>
-      </div>
-      <ul class="emergency__list">
-        <li><span>Dalisay</span><a href="tel:+66616970716">+66 61 697 0716</a><a href="https://wa.me/66616970716" target="_blank" rel="noopener">WhatsApp</a></li>
-      </ul>
-    </div>
-""" + EMERGENCY.split('<div class="emergency" id="emergency">', 1)[1].split("    </div>\n  </div>\n</section>", 1)[0].join(
-    ['    <div class="emergency emergency--page">', "    </div>\n"]) + """  </div>
-</section>
-
-</main>""", "Emergency & Things to Know — Dalisay Koh Phangan",
-      "Emergency numbers on Koh Phangan (Dalisay, hospitals, police and tourist police) and practical tips for your stay.")
+""" + "".join(ed_calls(n, *c) for n, c in enumerate(CALLS, 1)) + """</main>""",
+      "Emergency & Things to Know — Dalisay Koh Phangan",
+      "Emergency numbers on Koh Phangan (Dalisay, hospitals, police and tourist police) and practical tips for your stay.",
+      editorial=True)
 print("info.html written")
