@@ -285,7 +285,9 @@ ed_page("food.html", "page-guide--food",
         ("todo.html", "Things to do"),
         [("", FOOD)],
         ("Hungry for more ideas?",
-         "Tell us what you feel like and we'll point you to our favourite spot for it."),
+         "Tell us what you feel like and we'll point you to our favourite spot for it. "
+         'Staying in? <a href="https://www.phangan-delivery.com/" target="_blank" rel="noopener">Phangan Delivery ↗</a> '
+         "brings food from restaurants around the island to your door."),
         "Eat & Drink — Dalisay Koh Phangan",
         "Dalisay's favourite places to eat and drink on Koh Phangan: cafes near Hin Kong, Thai food, night markets, bakeries and sunset bars.")
 
