@@ -39,7 +39,7 @@ FOOD = [
   ("Happiness Restaurant", "", "Beachfront Thai food and seafood with views across Hin Kong Bay.", [("", "Happiness Restaurant Hin Kong Koh Phangan")]),
   ("L'Alcove", "", "A beachfront bistro for dinner, wine and sunset drinks.", [("", "Alcove Bistro Koh Phangan")]),
   ("Cintamani", "", "A cocktail bar and tapas restaurant with delightful decor and sunset views.", [("", "Cintamani Koh Phangan")]),
-  ("Mana Beach Bar Cafe", "", "A beachside stop for drinks and a relaxed afternoon.", [("", "Mana Beach Bar Cafe Hin Kong Koh Phangan")]),
+  ("Mana Beach Bar Cafe", "", "A great beachside cocktail bar with DJs every night. Happy hour from 9 am to 7 pm.", [("", "Mana Beach Bar Cafe Hin Kong Koh Phangan")]),
   ("El Barrio", "", "Mexican food and cocktails. A fun choice for an evening out.", [("", "El Barrio Hin Kong Koh Phangan")]),
   ("Dar Mansour", "", "Moroccan dining with slow-cooked tagines and a candlelit garden setting. Reserve ahead and ask about pre-ordering.", [("", "Dar Mansour Koh Phangan")]),
   ("Sati Pot", "", "Persian food with fragrant rice dishes and rich flavours.", [("", "Sati Pot Koh Phangan")]),
@@ -47,15 +47,15 @@ FOOD = [
  ("thai", "Thai food", "From MICHELIN-recommended dining to simple local favourites.", [
   ("Dear Phangan", "Wok Tum", "MICHELIN Guide recommended Thai dining with a seasonal menu featuring local ingredients. Reservations are essential.", [("", "Dear Phangan Koh Phangan")]),
   ("Nong Taa Ped Palo", "Wok Tum", "Super simple, cheap Thai food. A great option for a casual local meal!", [("", "Nong Taa Ped Palo Koh Phangan")]),
-  ("Whum Noi Noi", "Nai Wok", "A chill spot on the beach serving authentic Thai food. Recommended for a relaxed evening meal and drinks.", [("", "Whum Noi Noi Koh Phangan")]),
+  ("Whum Noi Noi", "Nai Wok", "A chill spot on the beach serving authentic Southern Thai food. Recommended for a relaxed evening meal and drinks.", [("", "Whum Noi Noi Koh Phangan")]),
   ("The Wave Sunset Bar", "Haad Son", "Thai food on a private beach and a great sunset spot. Lovely for chilling or working during the day.", [("", "The Wave Sunset Koh Phangan")]),
   ("Baan Boontom Somtum &amp; Gallery", "Thong Sala", "Thai and Isaan food in a charming wooden house with an art gallery atmosphere.", [("", "Baan Boontom Somtum Gallery Koh Phangan")]),
   ("Nong View", "Baan Tai", "Local Thai food with Southern Thai flavours.", [("", "Nong View Restaurant Koh Phangan")]),
   ("Krua Chao Koh", "Baan Tai", "Southern Thai food and seafood. A lovely choice for exploring local flavours.", [("", "Krua Chao Koh Ban Tai Koh Phangan")]),
   ("At Chiang Mai", "Baan Tai", "A small, family-run spot for Northern Thai food. Don't miss the khao soi!", [("", "At Chiang Mai Ban Tai Koh Phangan")]),
   ("Madam Saak Thong", "Chaloklum", "A family-run restaurant serving Thai and Isaan dishes.", [("", "Madam Saak Thong Koh Phangan")]),
-  ("Chicken Rice Shop", "Thong Sala", "Simple, affordable Thai comfort food. Stop for a plate of chicken rice or pork with rice.", [("", "Chicken Rice Shop Koh Phangan|ChIJHZX553_-VDARU1_KJXkcing")]),
-  ("Pork Leg Restaurant", "Thong Sala", "A simple local spot for braised pork leg and Thai noodle soup.", [("", "Pork Leg Restaurant Koh Phangan")]),
+  ("Chicken Rice Shop", "Thong Sala", "Simple, affordable Thai comfort food. Stop for a plate of chicken rice or pork with rice. Open for lunch.", [("", "Chicken Rice Shop Koh Phangan|ChIJHZX553_-VDARU1_KJXkcing")]),
+  ("Pork Leg Restaurant", "Thong Sala", "A local spot for braised pork leg and Thai noodle soup. Open for lunch.", [("", "Pork Leg Restaurant Koh Phangan")]),
   ("Uncle Teum's Duck Noodle &amp; Crispy Pork", "Maduea Wan", "A local favourite for duck noodles and crispy pork, with seats around a little pond and waterfall. Go early, as it closes when the food runs out.", [("", "Uncle Teum's Duck Noodle Crispy Pork Koh Phangan")]),
  ], None),
  ("markets", "Night markets &amp; street food", "Two weekly markets worth planning your evening around.", [
@@ -67,7 +67,7 @@ FOOD = [
   ("Balance Specialty Coffee", "Maduea Wan", "Specialty coffee and brunch. A nice stop while exploring the island.", [("", "Balance Specialty Coffee Koh Phangan")]),
   ("Bubba's Coffee", "3 locations", "Specialty coffee, breakfast and brunch, with three locations around the island.", [("Thong Sala", "Bubbas Coffee Thong Sala Koh Phangan"), ("Baan Tai", "Bubbas Coffee Baan Tai Koh Phangan"), ("Haad Diao", "Bubbas Roastery Koh Phangan")]),
   ("Cookies", "2 locations", "A relaxed spot for good coffee and a hearty breakfast.", [("Hin Kong", "Little Cookies Koh Phangan"), ("Sri Thanu", "Cookies Cafe Koh Phangan")]),
-  ("Pura Vida Cafe", "2 locations", "Breakfast, brunch and coffee, with vegetarian and vegan options. There's a second cafe at Haad Yao beach.", [("Hin Kong", "Pura Vida Hin Kong"), ("Haad Yao", "Pura vida cafe Koh Phangan|ChIJEeOrNcABVTAR_HVTgHXDCQs")]),
+  ("Pura Vida Cafe", "2 locations", "Breakfast, brunch and coffee, with vegetarian and vegan options.", [("Hin Kong", "Pura Vida Hin Kong"), ("Haad Yao", "Pura vida cafe Koh Phangan|ChIJEeOrNcABVTAR_HVTgHXDCQs")]),
   ("Indigo Specialty Coffee &amp; Bakery", "Hin Kong", "A lovely spot for coffee, breakfast, brunch and freshly baked treats.", [("", "Indigo Specialty Coffee Bakery Koh Phangan")]),
   ("Kaif", "Chaloklum", "A beachfront cafe, restaurant and deli for coffee, breakfast, brunch or a relaxed meal overlooking the bay.", [("", "Kaif Chaloklum Koh Phangan")]),
   ("Bar Nena", "Thong Sala", "An Italian cafe and bakery for coffee, pastries, focaccia and pizza slices.", [("", "Bar Nena Koh Phangan")]),
@@ -150,4 +150,36 @@ WELL = [
   ("The HealthLab", "Hin Kong", "A tranquil wellness spot with a sauna and cold plunge, great facilities at a good price, and food and drinks.", [("", "The HealthLab Koh Phangan")]),
   ("AUM", "Maduea Wan", "Sauna, sound baths and bonfire evenings, with good vegetarian food and a friendly crowd.", [("", "AUM Sound Healing Center Koh Phangan")]),
  ], "Booking ahead for massage and spa treatments is advisable."),
+]
+
+# Parties page (parties.html): four groups of three venues the user picked.
+PARTIES = [
+ ("moon", "Phangan classics", "The island's legendary nights, most of them timed by the moon. Check this month's dates before you plan.", [
+  ("Full Moon Party", "Haad Rin", "The legendary one. Thousands dance on the beach until sunrise, with fire shows, buckets and a sound system every few metres. Once a month; dates shift around Buddhist holidays.", [("", "Fullmoon Party koh Phangan|ChIJBzxzIgD9VDARoh9RKYYx_FM")]),
+  ("Half Moon Festival", "Baan Tai", "A big, produced festival in the jungle with huge stages and lights. Techno, progressive and psytrance, twice a month. Tickets are cheaper in advance.", [("", "Magical Forest by Halfmoon Festival|ChIJocFEdaz9VDARB01YGSd97H4")]),
+  ("Jungle Experience", "Baan Tai", "An open-air party in the Baan Tai jungle, with UV decor and melodic techno and house until dawn. Usually the night before the Full Moon.", [("", "Jungle Experience Koh Phangan|ChIJzQVE0qv9VDARerIg-zO4ljQ")]),
+  ("Utopia", "Than Sadet road", "Big festival nights in the jungle, with international headliners around New Year and peak season. Keep an eye on the line-ups.", [("", "Utopia Events Koh Phangan|ChIJ3T5TCnv9VDARtzitkviXlSw")]),
+ ], None),
+ ("jungle", "Jungle clubs", "Big sound systems hidden in the trees around Baan Tai.", [
+  ("OXA", "Baan Tai", "A polished open-air club deep in the jungle, with techno and melodic house. One of the island's best-reviewed nights out.", [("", "OXA Jungle Party|ChIJ_fbJtPL8VDAR8MZAPZqZo1A")]),
+  ("Waterfall Party", "Baan Tai", "Dance between waterfalls and jungle streams. House, techno and psytrance, several nights a month.", [("", "Waterfall Festival Koh Phangan|ChIJ1WAuvfv8VDARuVGN781wAZQ")]),
+  ("Retro Mountain", "Baan Tai", "A jungle club up the hill, with techno and house most weeks from Thursday to Sunday, plus Full Moon afterparties.", [("", "Retro Mountain Jungle Club Phangan|ChIJ7U9JMQD9VDARwMZtunZFrnc")]),
+  ("Unclave", "Baan Tai", "A hidden jungle club off Than Sadet Road, with an intimate vibe, a powerful sound system and carefully chosen electronic music.", [("", "Unclave Phangan|ChIJfUCIUWn9VDARQeb0JEYhwnI")]),
+ ], None),
+ ("beach", "Beach sessions", "Weekend nights by the sea, with sand between your toes.", [
+  ("Eden", "Haad Yuan", "Barefoot, underground and friendly. Deep, hypnotic electronic music every Saturday night into Sunday morning. Get there by longtail boat from Haad Rin.", [("", "Eden Garden Haad Yuan|ChIJTandsPL9VDARVeT9BVav2Bs")]),
+  ("Bambū", "Haad Yuan", "Sunday sessions at Bambū Huts, from the afternoon until late. House, disco and melodic beats right on the beach.", [("", "Bambu Huts Haad Yuan|ChIJR_9cCSL9VDAR9nBeNk6I0nI")]),
+  ("Sabaii Bay", "Baan Tai", "A chilled beach club by day that turns into a party on Friday nights, from sunset into the night.", [("", "Sabaii Bay Beach Club Koh Phangan|ChIJWddVqHP9VDARVxMeFzOxJfw")]),
+  ("Merkaba", "Near Haad Rin", "A sunset beach club where Sundays mean Beach Bums: a full day of DJs, dancing and beach vibes.", [("", "Merkaba Sunset Beach Club Koh Phangan|ChIJfTxCRpT8VDAR6ahXeeDQ1EU")]),
+ ], None),
+ ("local", "Close to home", "West-side nights, a short ride from Dalisay.", [
+  ("Hollystone", "Near Dalisay", "Just down the road! Famous for its Saturday parties, with electronic music from about 8 pm.", [("", "Hollystone Koh Phangan|ChIJ0WVWEAH-VDAR4uve8gISYHg")]),
+  ("Rasta Home", "Haad Yao", "Friday reggae nights with live bands and a DJ, in a relaxed and colourful spot.", [("", "Rasta Home Koh Phangan|ChIJw-sIdJUBVTARjS5HcshxS0g")]),
+  ("Seaboard", "Haad Yao", "Wednesday is the Bizarre Bazaar: a night market with music, food and drinks that runs late into the night.", [("", "Seaboard Bungalows Koh Phangan|ChIJ6RRAWZYBVTARbxR1rnU1-ic")]),
+  ("Soundgarden", "Thong Sala", "A multi-level bar built around a big tree in town, with live music and cocktails late into the night.", [("", "Sound Garden Koh Phangan|ChIJ_Qxtmnn_VDARnD4UUrKNHJE")]),
+ ], None),
+ ("ecstatic", "Ecstatic dance", "Barefoot, alcohol-free dance journeys with a DJ, ending in a sound bath. Pure joy.", [
+  ("RISE at Pyramid Yoga", "Haad Yao hills", "Every Sunday from 10:30 am to 2:30 pm. Dance your heart out in the hills, then melt into a sound bath.", [("", "Pyramid Yoga Koh Phangan")]),
+  ("SOULFIRE at AUM", "Maduea Wan", "Every Friday from 6 pm to 10:30 pm. A sunset-to-night dance that ends with sound healing.", [("", "AUM Sound Healing Center Koh Phangan")]),
+ ], "Party safe: wear shoes, never swim at night, keep some cash on you and book a taxi home."),
 ]

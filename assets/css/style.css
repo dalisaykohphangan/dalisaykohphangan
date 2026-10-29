@@ -3560,3 +3560,142 @@ html[lang="th"] .h2 {
 .bungalow__title .bungalow__thai {
   text-transform: none;
 }
+
+/* =====================================================================
+   Parties page (parties.html): dark like the header, hot pink accents and
+   messy two-photo collages beside each group, alternating left and right.
+   ===================================================================== */
+body.page-ed.page-guide--party {
+  --ed-ink: var(--cream);
+  --ed-accent: #ff5fae;
+  --ed-rule: rgba(236, 231, 218, 0.22);
+  background-color: var(--deep);
+}
+
+.page-guide--party .ed-title {
+  text-shadow: 0 0 30px rgba(255, 95, 174, 0.35);
+}
+
+.page-guide--party .ed-num {
+  -webkit-text-stroke-color: var(--ed-accent);
+}
+
+.ed-collage-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+  margin-top: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.ed-collage-row--right .ed-collage {
+  order: 2;
+}
+
+.ed-list--single {
+  grid-template-columns: 1fr;
+}
+
+.ed-collage {
+  position: relative;
+  min-height: clamp(24rem, 42vw, 36rem);
+}
+
+/* Polaroid-style prints, tilted and overlapping, with a strip of tape. */
+.ed-collage__photo {
+  position: absolute;
+  margin: 0;
+  padding: 0.6rem 0.6rem 2.2rem;
+  background: #fdfaf4;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  transition: transform 0.4s var(--ease);
+}
+
+.ed-collage__photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.ed-collage__photo::before {
+  content: "";
+  position: absolute;
+  top: -0.8rem;
+  left: 50%;
+  width: 5.5rem;
+  height: 1.6rem;
+  background: rgba(255, 95, 174, 0.55);
+  transform: translateX(-50%) rotate(-3deg);
+}
+
+.ed-collage__photo--1 {
+  top: 0;
+  left: 0;
+  width: 72%;
+  transform: rotate(-5deg);
+  z-index: 1;
+}
+
+.ed-collage__photo--2 {
+  right: 0;
+  bottom: 0;
+  width: 62%;
+  transform: rotate(4deg);
+  z-index: 2;
+}
+
+.ed-collage-row--right .ed-collage__photo--1 {
+  left: auto;
+  right: 0;
+  transform: rotate(5deg);
+}
+
+.ed-collage-row--right .ed-collage__photo--2 {
+  right: auto;
+  left: 0;
+  transform: rotate(-4deg);
+}
+
+.ed-collage__photo:hover {
+  z-index: 3;
+  transform: rotate(0deg) scale(1.03);
+}
+
+@media (max-width: 860px) {
+  .ed-collage-row {
+    grid-template-columns: 1fr;
+  }
+
+  .ed-collage-row--right .ed-collage {
+    order: 0;
+  }
+
+  .ed-collage {
+    min-height: clamp(18rem, 70vw, 26rem);
+  }
+}
+
+/* Phones and small tablets: the section icon gets its own column beside the
+   title instead of floating over the intro text. */
+@media (max-width: 860px) {
+  .ed-sec__head {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+  }
+
+  .ed-sec__title {
+    padding-right: 0;
+  }
+
+  .ed-sec__sticker {
+    position: static;
+    grid-column: 3;
+    grid-row: 1;
+    align-self: center;
+    width: clamp(3.5rem, 14vw, 5.5rem);
+  }
+
+  .ed-sec__intro {
+    grid-column: 1 / -1;
+  }
+}

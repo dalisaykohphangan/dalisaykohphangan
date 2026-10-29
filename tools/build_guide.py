@@ -13,7 +13,7 @@ import urllib.parse
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-from guide_data import EXPLORE, FOOD, WELL  # noqa: E402
+from guide_data import EXPLORE, FOOD, PARTIES, WELL  # noqa: E402
 
 REPO = os.path.dirname(HERE)
 SITE = "https://www.dalisaykohphangan.com"
@@ -23,6 +23,7 @@ SHORT = {"beaches": "Beaches", "hikes": "Hikes &amp; waterfalls", "boats": "Boat
          "nearby": "Near Dalisay", "thai": "Thai food", "markets": "Night markets",
          "coffee": "Coffee &amp; bakeries", "world": "Western food", "bars": "Viewpoints &amp; drinks",
          "fitness": "Gyms", "muaythai": "Muay Thai", "padel": "Sports &amp; games",
+         "moon": "Phangan classics", "jungle": "Jungle clubs", "beach": "Beach sessions", "local": "Close to home", "ecstatic": "Ecstatic dance",
          "yoga": "Yoga", "spa": "Massage &amp; spa"}
 
 EMERGENCY = '''<section class="section guide-group guide-group--emergency">
@@ -195,19 +196,29 @@ def ed_place(i, name, where, desc, links):
     return h
 
 
-def ed_section(num, gid, title, intro, items, note):
+def ed_section(num, gid, title, intro, items, note, photos=None):
+    """A numbered section. With photos, the places sit in one column beside a
+    messy two-photo collage that alternates left and right (parties page)."""
+    art = "" if photos else f'      {sticker(ILL[gid], "ed-sec__sticker", TILT[num % len(TILT)])}\n'
+    places = f'<ol class="ed-list">' + "".join(ed_place(i + 1, *it) for i, it in enumerate(items)) + '</ol>'
+    if photos:
+        side = "left" if num % 2 else "right"
+        figs = "".join(f'<figure class="ed-collage__photo ed-collage__photo--{k}"><img src="{src}" alt="{alt}" '
+                       f'loading="lazy" decoding="async"></figure>' for k, (src, alt) in enumerate(photos, 1))
+        places = (f'<div class="ed-collage-row ed-collage-row--{side}"><div class="ed-collage">{figs}</div>'
+                  f'{places.replace("ed-list", "ed-list ed-list--single", 1)}</div>')
     h = (f'<section class="ed-sec" id="{gid}">\n  <div class="wrap">\n    <header class="ed-sec__head">\n'
          f'      <span class="ed-num">{num:02d}</span>\n      <h2 class="ed-sec__title">{title}</h2>\n'
-         f'      {sticker(ILL[gid], "ed-sec__sticker", TILT[num % len(TILT)])}\n'
+         f'{art}'
          f'      <p class="ed-sec__intro">{intro}</p>\n    </header>\n'
-         f'    <ol class="ed-list">' + "".join(ed_place(i + 1, *it) for i, it in enumerate(items)) + '</ol>\n')
+         f'    {places}\n')
     if note:
         h += f'    <p class="ed-scribble">{note}</p>\n'
     return h + '  </div>\n</section>\n\n'
 
 
 def ed_page(filename, body_class, title_html, intro, scribble, hero_photo, other, parts, cta,
-            meta_title, meta_desc):
+            meta_title, meta_desc, photos=None):
     guides = [g for _, gs in parts for g in gs]
     count = sum(len(g[3]) for g in guides)
     index = "".join(f'<a href="#{g[0]}"><span>{i + 1:02d}</span>{SHORT[g[0]]}</a>' for i, g in enumerate(guides))
@@ -235,7 +246,7 @@ def ed_page(filename, body_class, title_html, intro, scribble, hero_photo, other
         if part_title:
             main += f'<div class="ed-part"><div class="wrap"><span>{part_title}</span></div></div>\n\n'
         for g in gs:
-            main += ed_section(n, *g)
+            main += ed_section(n, *g, photos=(photos or {}).get(g[0]))
             n += 1
     main += f"""<section class="ed-cta">
   <div class="wrap">
@@ -258,8 +269,11 @@ ed_page("todo.html", "page-guide--todo",
         ("assets/img/guide/beaches.jpg", "Clear turquoise water, granite boulders and a longtail boat in a Koh Phangan bay"),
         ("food.html", "Eat &amp; drink"),
         [("Part one: explore the island", EXPLORE), ("Part two: stay active &amp; unwind", WELL)],
-        ("Tell us what you enjoy",
-         "We'll help you plan your days, arrange boat trips and diving, and point you to the right trail."),
+        ("Need help getting around?",
+         'Rent a scooter from Mena, just down the road from Dalisay: '
+         '<a href="tel:+66827567582">082 756 7582</a> · '
+         '<a href="https://www.google.com/maps/search/?api=1&amp;query=Mena+motorbike+for+rent+Koh+Phangan&amp;query_place_id=ChIJia5OnSr_VDARWD6SvJwPCjQ" target="_blank" rel="noopener">Map ↗</a>. '
+         "We'll also help you plan your days, arrange boat trips and diving, and point you to the right trail."),
         "Things to Do — Dalisay Koh Phangan",
         "Dalisay's guide to things to do on Koh Phangan: beaches, hikes, waterfalls, boat trips, gyms, yoga and spas.")
 
@@ -305,6 +319,30 @@ def ed_calls(num, title, intro, rows):
 
 """
 
+
+# Party nights page: set False to keep it out of a publish while it is still a draft.
+BUILD_PARTIES = False
+
+P = "assets/img/parties/"
+if BUILD_PARTIES:
+  ed_page("parties.html", "page-guide--party",
+        "Party<br>nights",
+        "Full moons, jungle clubs and barefoot beach nights. Our pick of the island's best parties.",
+        "dance till sunrise ↓",
+        (P + "hero.jpg", "A crowd in front of a stage lit in green and purple"),
+        ("todo.html", "Things to do"),
+        [("", PARTIES)],
+        ("Need a ride home?",
+         "Ask us which parties are on this week, and we'll share a trusted taxi number for the trip back."),
+        "Party Nights — Dalisay Koh Phangan",
+        "Dalisay's guide to Koh Phangan parties: Full Moon, Half Moon, jungle clubs, beach sessions and nights close to Dalisay.",
+        photos={
+            "moon": [(P + "sunset-crowd.jpg", "A crowd on the beach at sunset"), (P + "fire-show.jpg", "A crowd watching fire dancers on the beach at night")],
+            "jungle": [(P + "light-tunnel.jpg", "A tunnel of pink and blue lights over a crowd"), (P + "decks.jpg", "A DJ mixer glowing in the dark")],
+            "beach": [(P + "festival-girl.jpg", "A woman dancing with her hand in the air at a party"), (P + "fire-dancer.jpg", "A woman performing a fire show at night")],
+            "local": [(P + "disco-balls.jpg", "Red disco balls"), (P + "dj.jpg", "A DJ at the controls under red light")],
+            "ecstatic": [(P + "ecstatic-group.jpg", "Dancers reaching up together in blue and green light"), (P + "ecstatic-light.jpg", "A dancer's silhouette surrounded by swirls of pink and blue light")],
+        })
 
 # Emergency & things to know page: parked for now (user: "save it for future use").
 # Set to True to build info.html again; the full page is also on branch info-page-draft.
