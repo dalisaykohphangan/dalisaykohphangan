@@ -270,9 +270,11 @@ ed_page("todo.html", "page-guide--todo",
         ("food.html", "Eat &amp; drink"),
         [("Part one: explore the island", EXPLORE), ("Part two: stay active &amp; unwind", WELL)],
         ("Need help getting around?",
-         'Rent a scooter from Mena, just down the road from Dalisay: '
-         '<a href="tel:+66827567582">082 756 7582</a> · '
-         '<a href="https://www.google.com/maps/search/?api=1&amp;query=Mena+motorbike+for+rent+Koh+Phangan&amp;query_place_id=ChIJia5OnSr_VDARWD6SvJwPCjQ" target="_blank" rel="noopener">Map ↗</a>. '
+         'Rent a scooter close to Dalisay from Mena '
+         '(<a href="tel:+66827567582">082 756 7582</a> · '
+         '<a href="https://www.google.com/maps/search/?api=1&amp;query=Mena+motorbike+for+rent+Koh+Phangan&amp;query_place_id=ChIJia5OnSr_VDARWD6SvJwPCjQ" target="_blank" rel="noopener">Map ↗</a>) '
+         'or Mr Tom (<a href="tel:+66922709987">092 270 9987</a> · '
+         '<a href="https://www.google.com/maps/search/?api=1&amp;query=Mr+Tom+motorbike+rental+Koh+Phangan&amp;query_place_id=ChIJ7yDPQpr_VDART4CcI4i00Pc" target="_blank" rel="noopener">Map ↗</a>). '
          "We'll also help you plan your days, arrange boat trips and diving, and point you to the right trail."),
         "Things to Do — Dalisay Koh Phangan",
         "Dalisay's guide to things to do on Koh Phangan: beaches, hikes, waterfalls, boat trips, gyms, yoga and spas.")
@@ -335,7 +337,8 @@ if BUILD_PARTIES:
         ("todo.html", "Things to do"),
         [("", PARTIES)],
         ("Need a ride home?",
-         "Ask us which parties are on this week, and we'll share a trusted taxi number for the trip back."),
+         "Ask us which parties are on this week. For the trip back, message Taxi &amp; Van Service Kohphangan on WhatsApp: "
+         '<a href="https://wa.me/66861654226" target="_blank" rel="noopener">086 165 4226 ↗</a>.'),
         "Party Nights — Dalisay Koh Phangan",
         "Dalisay's guide to Koh Phangan parties: Full Moon, Half Moon, jungle clubs, beach sessions and nights close to Dalisay.",
         photos={
