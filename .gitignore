@@ -2,3 +2,6 @@
 
 # Private print files (rental agreement etc.) — keep out of the public repo
 print/
+
+# Untouched originals kept locally by tools/grade_greens.py (already in git history)
+tools/photo-originals/
